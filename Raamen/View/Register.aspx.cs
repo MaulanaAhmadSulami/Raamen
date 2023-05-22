@@ -14,9 +14,6 @@ namespace Raamen.View
 
         }
 
-        protected void ddlGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

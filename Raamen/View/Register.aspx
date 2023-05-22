@@ -36,7 +36,7 @@
                 <input type="password" id="confirmPassword" name="confirmPassword" runat="server" placeholder="Confirm your password" required />
             </div>
             <div class="form-group">
-                <button type="submit">Register</button>
+                <button type="submit" onclick="">Register</button>
             </div>
         </div>
     </form>
