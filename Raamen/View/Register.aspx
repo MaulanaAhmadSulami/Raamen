@@ -1,42 +1,48 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Raamen.View.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Raamen.View.Register" EnableViewState="true"%>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Raamen</title>
-    <link href="RegistStyle.css" rel="stylesheet" />
+    <link href="RegistStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <h1>    Raamen</h1>
+            <h1>Raamen</h1>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" runat="server" placeholder="Enter your username" required />
+                <asp:Label ID="Lblusername" runat="server" Text="Username"></asp:Label>
+                <asp:TextBox ID="txtUsername" runat="server" placeholder="Enter your username" ></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" runat="server" placeholder="Enter your email" required />
+                <asp:Label ID="Lblemail" runat="server" Text="Email"></asp:Label>
+                <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter your email" ></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender" runat="server" required>
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+                <asp:Label ID="Lblgender" runat="server" Text="Gender"></asp:Label>
+                <asp:DropDownList ID="ddlGender" runat="server">
+                    <asp:ListItem Text="Select Gender" Value=""></asp:ListItem>
+                    <asp:ListItem Text="Male" Value="male"></asp:ListItem>
+                    <asp:ListItem Text="Female" Value="female"></asp:ListItem>
+                </asp:DropDownList>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" runat="server" placeholder="Enter your password" required />
+                <asp:Label ID="Lblpassword" runat="server" Text="Password"></asp:Label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter your password"  ></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" runat="server" placeholder="Confirm your password" required />
+                <asp:Label ID="Lblconfirm_password" runat="server" Text="Confirm Password" ></asp:Label>
+                <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="Confirm your password"  ></asp:TextBox>
             </div>
+
             <div class="form-group">
-                <button type="submit" onclick="">Register</button>
+                <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+            </div>
+
+            <div class="form-group">
+                <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="Regist-btn"/> <br />
+                <asp:Button ID="btnReturn" runat="server" Text="Return" OnClick="btnReturn_Click" CssClass="Return-btn"/>
             </div>
         </div>
     </form>

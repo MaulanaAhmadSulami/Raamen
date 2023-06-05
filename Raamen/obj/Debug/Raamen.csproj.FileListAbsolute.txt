@@ -57,3 +57,7 @@ C:\Users\fFf\source\repos\Raamen\Raamen\obj\Debug\Raamen.csproj.CoreCompileInput
 C:\Users\fFf\source\repos\Raamen\Raamen\obj\Debug\Raamen.csproj.CopyComplete
 C:\Users\fFf\source\repos\Raamen\Raamen\obj\Debug\Raamen.dll
 C:\Users\fFf\source\repos\Raamen\Raamen\obj\Debug\Raamen.pdb
+C:\Users\fFf\source\repos\Raamen\Raamen\bin\EntityFramework.dll
+C:\Users\fFf\source\repos\Raamen\Raamen\bin\EntityFramework.SqlServer.dll
+C:\Users\fFf\source\repos\Raamen\Raamen\bin\EntityFramework.xml
+C:\Users\fFf\source\repos\Raamen\Raamen\bin\EntityFramework.SqlServer.xml

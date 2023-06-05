@@ -1,9 +1,12 @@
 ﻿body {
+    background-color: #7ec5f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
 }
+
 
 .container {
     width: 400px;
@@ -40,15 +43,41 @@ select {
     box-sizing: border-box;
 }
 
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
+.Regist-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
     border: none;
     border-radius: 3px;
+    background-color: #009fff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Regist-btn:hover{
+    background-color: #234e69;
+}
+
+.form-group button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Return-btn {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #009fff;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
+.Return-btn:hover {
+    background-color: #234e69;
 }
