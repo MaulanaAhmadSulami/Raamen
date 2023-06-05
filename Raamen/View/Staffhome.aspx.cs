@@ -35,6 +35,9 @@ namespace Raamen.View
 
                 name.Text = user.Username;
             }
+            // load data for gridview
+            cust_GV.DataSource = Repository.UserRepository.GetCustomers();
+            cust_GV.DataBind();
         }
 
         protected void logoutBtn_Click(object sender, EventArgs e)

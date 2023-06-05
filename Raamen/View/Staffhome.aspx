@@ -15,6 +15,18 @@
 
             <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" />
         </div>
+        <div>
+            <asp:Label ID="Label3" runat="server" Text="Customer Data"></asp:Label>
+            <asp:GridView ID="cust_GV" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="CustomerId" HeaderText="ID" />
+                    <asp:BoundField DataField="RoleId" HeaderText="Role ID" />
+                    <asp:BoundField DataField="Username" HeaderText="Username" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" />
+                    <asp:BoundField DataField="Gender" HeaderText="Gender" />
+                </Columns>
+            </asp:GridView>
+        </div>
     </form>
 </body>
 </html>
