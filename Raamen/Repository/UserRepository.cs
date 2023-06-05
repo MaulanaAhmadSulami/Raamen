@@ -21,5 +21,15 @@ namespace Raamen.Repository
             db.Users.Add(user);
             db.SaveChanges();
         }
+        public static List<User> GetCustomers()
+        {
+            List<User> users = (from x in db.Users where x.RoleId == 4 select x).ToList();
+            return users;
+        }
+        public static List<User> GetStaffs()
+        {
+            List<User> users = (from x in db.Users where x.RoleId == 3 select x).ToList();
+            return users;
+        }
     }
 }

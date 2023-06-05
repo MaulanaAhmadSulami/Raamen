@@ -31,6 +31,30 @@
                 </ul>
             </div>
         </div>
+        <div>
+            <asp:Label ID="Label2" runat="server" Text="Customer Data"></asp:Label>
+            <asp:GridView ID="cust_GV" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="CustomerId" HeaderText="ID" />
+                    <asp:BoundField DataField="RoleId" HeaderText="Role ID" />
+                    <asp:BoundField DataField="Username" HeaderText="Username" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" />
+                    <asp:BoundField DataField="Gender" HeaderText="Gender" />
+                </Columns>
+            </asp:GridView>
+        </div>
+        <div>
+            <asp:Label ID="Label3" runat="server" Text="Staff Data"></asp:Label>
+            <asp:GridView ID="staff_GV" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="CustomerId" HeaderText="ID" />
+                    <asp:BoundField DataField="RoleId" HeaderText="Role ID" />
+                    <asp:BoundField DataField="Username" HeaderText="Username" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" />
+                    <asp:BoundField DataField="Gender" HeaderText="Gender" />
+                </Columns>
+            </asp:GridView>
+        </div>
     </form>
 </body>
 </html>
