@@ -100,6 +100,7 @@
     <Content Include="View\Register.aspx" />
     <Content Include="View\RegistStyle.css" />
     <Content Include="View\Staffhome.aspx" />
+    <Content Include="View\StaffStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

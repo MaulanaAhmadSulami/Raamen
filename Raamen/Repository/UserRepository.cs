@@ -31,5 +31,9 @@ namespace Raamen.Repository
             List<User> users = (from x in db.Users where x.RoleId == 3 select x).ToList();
             return users;
         }
+
+
+        //Update section
+
     }
 }
