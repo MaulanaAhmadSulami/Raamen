@@ -101,6 +101,8 @@
     <Content Include="View\RegistStyle.css" />
     <Content Include="View\Staffhome.aspx" />
     <Content Include="View\StaffStyle.css" />
+    <Content Include="View\UpdatePage.aspx" />
+    <Content Include="View\UpdateStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +185,13 @@
     </Compile>
     <Compile Include="View\Staffhome.aspx.designer.cs">
       <DependentUpon>Staffhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdatePage.aspx.cs">
+      <DependentUpon>UpdatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdatePage.aspx.designer.cs">
+      <DependentUpon>UpdatePage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

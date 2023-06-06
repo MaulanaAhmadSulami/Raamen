@@ -18,7 +18,7 @@
                     <li><a href="Staffhome.aspx">Home</a></li>
                     <li><a href="#">Manage Ramen</a></li>
                     <li><a href="#">Order Queue</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="UpdatePage.aspx">Profile</a></li>
                     <li><a href="#">History</a></li>
                 </ul>
             </div>

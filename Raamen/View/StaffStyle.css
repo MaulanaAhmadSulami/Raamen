@@ -33,24 +33,24 @@ body {
     margin-left: auto;
 }
 
-    .navbar-items ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+.navbar-items ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .navbar-items ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
+.navbar-items ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
 
-            .navbar-items ul li a {
-                color: black;
-                text-decoration: none;
-                font-size: 30px;
-                font-weight: bold;
-            }
+.navbar-items ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
 
-                .navbar-items ul li a:hover {
-                    text-decoration: underline;
-                }
+.navbar-items ul li a:hover {
+    text-decoration: underline;
+}
