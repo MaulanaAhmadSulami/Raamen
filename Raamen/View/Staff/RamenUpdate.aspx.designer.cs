@@ -33,13 +33,13 @@ namespace Raamen.View.Staff
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Name control.
+        /// NameTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Name;
+        protected global::System.Web.UI.WebControls.TextBox NameTxt;
 
         /// <summary>
         /// Label4 control.
@@ -51,13 +51,13 @@ namespace Raamen.View.Staff
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Meat control.
+        /// MeatDrop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Meat;
+        protected global::System.Web.UI.WebControls.DropDownList MeatDrop;
 
         /// <summary>
         /// Label2 control.
@@ -69,13 +69,13 @@ namespace Raamen.View.Staff
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Broth control.
+        /// BrothTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Broth;
+        protected global::System.Web.UI.WebControls.TextBox BrothTxt;
 
         /// <summary>
         /// Label3 control.
@@ -87,13 +87,13 @@ namespace Raamen.View.Staff
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Price control.
+        /// PriceTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Price;
+        protected global::System.Web.UI.WebControls.TextBox PriceTxt;
 
         /// <summary>
         /// updateButton control.
@@ -105,13 +105,13 @@ namespace Raamen.View.Staff
         protected global::System.Web.UI.WebControls.Button updateButton;
 
         /// <summary>
-        /// status control.
+        /// statusTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label status;
+        protected global::System.Web.UI.WebControls.Label statusTxt;
 
         /// <summary>
         /// ID control.

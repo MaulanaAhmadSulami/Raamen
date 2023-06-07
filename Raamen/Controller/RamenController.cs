@@ -15,7 +15,7 @@ namespace Raamen.Controller
             bool priceNotEmpty = int.TryParse(price, out priceInt);
             if (!name.Contains("Ramen"))
             {
-                return "Must contains 'Ramen'";
+                return "Name must contains 'Ramen'";
             }
             else if (meat == 0)
             {
@@ -42,13 +42,9 @@ namespace Raamen.Controller
         {
             int priceInt = 0;
             bool priceNotEmpty = int.TryParse(price, out priceInt);
-            if (id == 0)
+            if (!name.Contains("Ramen"))
             {
-                return "ID error";
-            }
-            else if (!name.Contains("Ramen"))
-            {
-                return "Must contains 'Ramen'";
+                return "Name must contains 'Ramen'";
             }
             else if (meat == 0)
             {

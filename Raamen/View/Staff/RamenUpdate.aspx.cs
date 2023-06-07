@@ -13,35 +13,38 @@ namespace Raamen.View.Staff
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = Request.QueryString["id"];
-            Raman ramen = RamenController.getRamenbyId(int.Parse(id));
-            if (ramen != null)
+            if (!IsPostBack)
             {
-                Name.Text = ramen.Name;
-                Meat.SelectedValue = ramen.MeatId.ToString();
-                Broth.Text = ramen.Broth;
-                Price.Text = ramen.Price;
-                ID.Value = ramen.RamenId.ToString();
-            }
-        }
-
-        protected void updateButton_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(ID.Value);
-            string name = Name.Text;
-            int meat = int.Parse(Meat.SelectedValue);
-            string broth = Broth.Text;
-            string price = Price.Text;
-            status.Text = RamenController.updateRamen(id, name, meat, broth, price);
-            if (status.Text.Equals("Success"))
-            {
-                Response.Redirect("RamenManage.aspx");
+                string id = Request.QueryString["id"];
+                Raman ramen = RamenController.getRamenbyId(int.Parse(id));
+                if (ramen != null)
+                {
+                    NameTxt.Text = ramen.Name;
+                    MeatDrop.SelectedValue = ramen.MeatId.ToString();
+                    BrothTxt.Text = ramen.Broth;
+                    PriceTxt.Text = ramen.Price;
+                    ID.Value = ramen.RamenId.ToString();
+                }
             }
         }
 
         protected void backButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("RamenManage.aspx");
+        }
+
+        protected void updateButton_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(ID.Value);
+            string name = NameTxt.Text;
+            int meat = int.Parse(MeatDrop.SelectedValue);
+            string broth = BrothTxt.Text;
+            string price = PriceTxt.Text;
+            statusTxt.Text = RamenController.updateRamen(id, name, meat, broth, price);
+            if (statusTxt.Text.Equals("Success"))
+            {
+                Response.Redirect("RamenManage.aspx");
+            }
         }
     }
 }

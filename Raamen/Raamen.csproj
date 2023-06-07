@@ -94,6 +94,9 @@
     <Content Include="View\Admin\NavbarStyle.css" />
     <Content Include="View\Admin\Profile.aspx" />
     <Content Include="View\Admin\ProfileStyle.css" />
+    <Content Include="View\Admin\RamenInsert.aspx" />
+    <Content Include="View\Admin\RamenManage.aspx" />
+    <Content Include="View\Admin\RamenUpdate.aspx" />
     <Content Include="View\Customer\Home.aspx" />
     <Content Include="View\Customer\HomeStyle.css" />
     <Content Include="View\Customer\HomeUnused.aspx" />
@@ -182,6 +185,27 @@
     </Compile>
     <Compile Include="View\Admin\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\RamenInsert.aspx.cs">
+      <DependentUpon>RamenInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\RamenInsert.aspx.designer.cs">
+      <DependentUpon>RamenInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\RamenManage.aspx.cs">
+      <DependentUpon>RamenManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\RamenManage.aspx.designer.cs">
+      <DependentUpon>RamenManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\RamenUpdate.aspx.cs">
+      <DependentUpon>RamenUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\RamenUpdate.aspx.designer.cs">
+      <DependentUpon>RamenUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Customer\Customer.Master.cs">
       <DependentUpon>Customer.Master</DependentUpon>
