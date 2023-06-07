@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.master.cs" Inherits="Raamen.View.Customer.Customer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="NavbarStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/View/assets/ramen_nobg.png" alt="Company Logo" class="company-logo" />
+            </div>
+            <div class="navbar-items">
+                <ul>
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="#">Order Ramen</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="/View/UpdatePage.aspx">Profile</a></li>
+                </ul>
+            </div>
+            <div class="navbar-items navbar-right">
+                <ul>
+                    <li><asp:Label ID="Label1" runat="server" Text="Hello! How are you," CssClass="greet_lbl"></asp:Label></li>
+                    <li><asp:Label ID="name" runat="server" Text="" CssClass="greets_userlbl"></asp:Label></li>
+                    <li><asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" /></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

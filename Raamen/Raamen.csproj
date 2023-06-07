@@ -89,22 +89,25 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="View\Admin\HomeUnused.aspx" />
     <Content Include="View\Admin\HomeStyle.css" />
     <Content Include="View\Admin\Home.aspx" />
+    <Content Include="View\Admin\NavbarStyle.css" />
     <Content Include="View\Customer\Home.aspx" />
+    <Content Include="View\Customer\HomeStyle.css" />
+    <Content Include="View\Customer\HomeUnused.aspx" />
+    <Content Include="View\Customer\NavbarStyle.css" />
     <Content Include="View\Staff\Home.aspx" />
+    <Content Include="View\Staff\NavbarStyle.css" />
     <Content Include="View\Welcome.aspx" />
-    <Content Include="View\WelcomeStyle.css" />
+    <Content Include="View\assets\css\Welcome.css" />
     <Content Include="View\Login.aspx" />
-    <Content Include="View\LoginStyle.css" />
+    <Content Include="View\assets\css\Login.css" />
     <Content Include="View\assets\ramen_nobg.png" />
     <Content Include="View\Register.aspx" />
-    <Content Include="View\RegistStyle.css" />
-    <Content Include="View\Staff\HomeUnused.aspx" />
+    <Content Include="View\assets\css\Regist.css" />
     <Content Include="View\Staff\HomeStyle.css" />
     <Content Include="View\UpdatePage.aspx" />
-    <Content Include="View\UpdateStyle.css" />
+    <Content Include="View\assets\css\Update.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -153,13 +156,6 @@
     <Compile Include="View\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\HomeUnused.aspx.cs">
-      <DependentUpon>HomeUnused.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Admin\HomeUnused.aspx.designer.cs">
-      <DependentUpon>HomeUnused.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View\Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -167,12 +163,26 @@
     <Compile Include="View\Admin\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Customer\Customer.Master.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\Customer.Master.designer.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
     <Compile Include="View\Customer\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Customer\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\HomeUnused.aspx.cs">
+      <DependentUpon>HomeUnused.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\HomeUnused.aspx.designer.cs">
+      <DependentUpon>HomeUnused.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Staff\Staff.Master.cs">
       <DependentUpon>Staff.Master</DependentUpon>
@@ -209,13 +219,6 @@
     <Compile Include="View\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\HomeUnused.aspx.cs">
-      <DependentUpon>HomeUnused.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Staff\HomeUnused.aspx.designer.cs">
-      <DependentUpon>HomeUnused.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View\UpdatePage.aspx.cs">
       <DependentUpon>UpdatePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,6 +238,7 @@
     <None Include="packages.config" />
     <Content Include="View\Admin\Admin.Master" />
     <Content Include="View\Staff\Staff.Master" />
+    <Content Include="View\Customer\Customer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
