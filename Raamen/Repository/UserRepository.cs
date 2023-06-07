@@ -34,6 +34,25 @@ namespace Raamen.Repository
 
 
         //Update section
+        public static User getUserById(int CustomerId)
+        {
+            return db.Users.FirstOrDefault(u => u.CustomerId == CustomerId);
+        }
 
+        public static void UpdateUser(User user)
+        {
+            User currentUser = db.Users.FirstOrDefault(u => u.CustomerId == user.CustomerId);
+
+            if(currentUser != null)
+            {
+                currentUser.Username = user.Username;
+                currentUser.Email = user.Email;
+                currentUser.Gender = user.Gender;
+                currentUser.Password = user.Password;
+
+                db.SaveChanges();
+            }
+        }
+        
     }
 }

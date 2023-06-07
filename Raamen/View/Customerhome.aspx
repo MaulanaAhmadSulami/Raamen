@@ -12,7 +12,8 @@
             <asp:Label ID="Label1" runat="server" Text="Welcome, "></asp:Label>
             <asp:Label ID="name" runat="server" Text=""></asp:Label> <br />
             <asp:Label ID="Label2" runat="server" Text="You are currently on Customer homepage"></asp:Label> <br />
-
+            
+            <a href="UpdatePage.aspx">Profile</a>
             <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" />
         </div>
     </form>

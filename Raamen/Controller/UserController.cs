@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Text.RegularExpressions;
+
 
 namespace Raamen.Controller
 {   
@@ -17,7 +19,7 @@ namespace Raamen.Controller
         public static string RegisterUser(string username, string email, string gender, string password, string conf_password, bool isStaff)
         {
 
-            if (username.Length < 5 || username.Length > 15)
+            if (!IsValidUsername(username))
             {
                 return "Username must be between 5 and 15 and alphabet with spaces only";
 
@@ -69,5 +71,46 @@ namespace Raamen.Controller
 
             return user;
         }
+
+        public static string UpdateUserProfile(int CustomerId, string username, string email, string gender, string password)
+        {
+            if (!IsValidUsername(username))
+            {
+                return "Length must be between 5 and 15 and alphabet with space only.";
+            }
+            else if (!email.EndsWith(".com"))
+            {
+                return "Email must ends with .com";
+            }
+            else if (string.IsNullOrEmpty(gender))
+            {
+                return "Gender must be chosen";
+            }
+            else if(password.Length < 5)
+            {
+                return "Password must be longer than 5 characters";
+            }
+
+            User user = UserRepository.getUserById(CustomerId);
+            if(user != null)
+            {
+                user.Username = username;
+                user.Email = email;
+                user.Gender = gender;
+                user.Password = password;
+
+                UserRepository.UpdateUser(user);
+
+                return "Profile updated successfully";
+            }
+
+            return "User not found";
+        }
+
+        private static bool IsValidUsername(string username)
+        {
+            return Regex.IsMatch(username, "^[A-Za-z ]{5,15}$");
+        }
+
     }
 }
