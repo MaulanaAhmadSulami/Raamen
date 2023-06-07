@@ -37,7 +37,7 @@ namespace Raamen.View
                                 rbFemale.Checked = true;
                             }
                         }
-                        txtPassword.Text = user.Password;
+                        //txtPassword.Text = user.Password;
                     }
                 }
             }

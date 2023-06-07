@@ -19,7 +19,7 @@
                     <li><a href="Home.aspx">Home</a></li>
                     <li><a href="#">Order Ramen</a></li>
                     <li><a href="#">History</a></li>
-                    <li><a href="/View/UpdatePage.aspx">Profile</a></li>
+                    <li><a href="Profile.aspx">Profile</a></li>
                 </ul>
             </div>
             <div class="navbar-items navbar-right">

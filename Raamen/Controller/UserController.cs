@@ -94,10 +94,13 @@ namespace Raamen.Controller
             User user = UserRepository.getUserById(CustomerId);
             if(user != null)
             {
+                if(!password.Equals(user.Password))
+                {
+                    return "Must be the same with the current password";
+                }
                 user.Username = username;
                 user.Email = email;
                 user.Gender = gender;
-                user.Password = password;
 
                 UserRepository.UpdateUser(user);
 

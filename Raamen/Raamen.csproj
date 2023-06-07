@@ -92,12 +92,18 @@
     <Content Include="View\Admin\HomeStyle.css" />
     <Content Include="View\Admin\Home.aspx" />
     <Content Include="View\Admin\NavbarStyle.css" />
+    <Content Include="View\Admin\Profile.aspx" />
+    <Content Include="View\Admin\ProfileStyle.css" />
     <Content Include="View\Customer\Home.aspx" />
     <Content Include="View\Customer\HomeStyle.css" />
     <Content Include="View\Customer\HomeUnused.aspx" />
     <Content Include="View\Customer\NavbarStyle.css" />
+    <Content Include="View\Customer\Profile.aspx" />
+    <Content Include="View\Customer\ProfileStyle.css" />
     <Content Include="View\Staff\Home.aspx" />
     <Content Include="View\Staff\NavbarStyle.css" />
+    <Content Include="View\Staff\Profile.aspx" />
+    <Content Include="View\Staff\ProfileStyle.css" />
     <Content Include="View\Welcome.aspx" />
     <Content Include="View\assets\css\Welcome.css" />
     <Content Include="View\Login.aspx" />
@@ -163,6 +169,13 @@
     <Compile Include="View\Admin\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Customer\Customer.Master.cs">
       <DependentUpon>Customer.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,6 +196,20 @@
     </Compile>
     <Compile Include="View\Customer\HomeUnused.aspx.designer.cs">
       <DependentUpon>HomeUnused.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Staff\Staff.Master.cs">
       <DependentUpon>Staff.Master</DependentUpon>
