@@ -17,7 +17,7 @@
             <div class="navbar-items">
                 <ul>
                     <li><a href="Home.aspx">Home</a></li>
-                    <li><a href="#">Manage Ramen</a></li>
+                    <li><a href="RamenManage.aspx">Manage Ramen</a></li>
                     <li><a href="#">Order Queue</a></li>
                     <li><a href="Profile.aspx">Profile</a></li>
                 </ul>

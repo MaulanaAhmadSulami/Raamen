@@ -104,6 +104,9 @@
     <Content Include="View\Staff\NavbarStyle.css" />
     <Content Include="View\Staff\Profile.aspx" />
     <Content Include="View\Staff\ProfileStyle.css" />
+    <Content Include="View\Staff\RamenInsert.aspx" />
+    <Content Include="View\Staff\RamenManage.aspx" />
+    <Content Include="View\Staff\RamenUpdate.aspx" />
     <Content Include="View\Welcome.aspx" />
     <Content Include="View\assets\css\Welcome.css" />
     <Content Include="View\Login.aspx" />
@@ -117,7 +120,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\RamenController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Factory\RamenFactory.cs" />
+    <Compile Include="Handler\RamenHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Model\Detail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -154,6 +160,7 @@
     <Compile Include="Model\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Repository\RamenRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="View\Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
@@ -210,6 +217,27 @@
     </Compile>
     <Compile Include="View\Staff\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\RamenInsert.aspx.cs">
+      <DependentUpon>RamenInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\RamenInsert.aspx.designer.cs">
+      <DependentUpon>RamenInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\RamenManage.aspx.cs">
+      <DependentUpon>RamenManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\RamenManage.aspx.designer.cs">
+      <DependentUpon>RamenManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\RamenUpdate.aspx.cs">
+      <DependentUpon>RamenUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\RamenUpdate.aspx.designer.cs">
+      <DependentUpon>RamenUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Staff\Staff.Master.cs">
       <DependentUpon>Staff.Master</DependentUpon>
