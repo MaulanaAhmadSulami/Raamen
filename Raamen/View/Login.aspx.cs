@@ -62,15 +62,15 @@ namespace Raamen.View
                 }
                 if (user.RoleId == 1)
                 {
-                    Response.Redirect("Adminhome.aspx");
+                    Response.Redirect("Admin/Home.aspx");
                 }
                 else if (user.RoleId == 3)
                 {
-                    Response.Redirect("Staffhome.aspx");
+                    Response.Redirect("Staff/Home.aspx");
                 }
                 else if (user.RoleId == 4)
                 {
-                    Response.Redirect("Customerhome.aspx");
+                    Response.Redirect("Customer/Home.aspx");
                 }
             }
             else

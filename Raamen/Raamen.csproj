@@ -89,18 +89,20 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="View\Adminhome.aspx" />
-    <Content Include="View\AdminStyle.css" />
-    <Content Include="View\Customerhome.aspx" />
-    <Content Include="View\Homepage.aspx" />
-    <Content Include="View\HomepageStyle.css" />
+    <Content Include="View\Admin\HomeUnused.aspx" />
+    <Content Include="View\Admin\HomeStyle.css" />
+    <Content Include="View\Admin\Home.aspx" />
+    <Content Include="View\Customer\Home.aspx" />
+    <Content Include="View\Staff\Home.aspx" />
+    <Content Include="View\Welcome.aspx" />
+    <Content Include="View\WelcomeStyle.css" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\LoginStyle.css" />
-    <Content Include="View\ramen_nobg.png" />
+    <Content Include="View\assets\ramen_nobg.png" />
     <Content Include="View\Register.aspx" />
     <Content Include="View\RegistStyle.css" />
-    <Content Include="View\Staffhome.aspx" />
-    <Content Include="View\StaffStyle.css" />
+    <Content Include="View\Staff\HomeUnused.aspx" />
+    <Content Include="View\Staff\HomeStyle.css" />
     <Content Include="View\UpdatePage.aspx" />
     <Content Include="View\UpdateStyle.css" />
     <Content Include="Web.config" />
@@ -144,26 +146,54 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="View\Adminhome.aspx.cs">
-      <DependentUpon>Adminhome.aspx</DependentUpon>
+    <Compile Include="View\Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Adminhome.aspx.designer.cs">
-      <DependentUpon>Adminhome.aspx</DependentUpon>
+    <Compile Include="View\Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="View\Customerhome.aspx.cs">
-      <DependentUpon>Customerhome.aspx</DependentUpon>
+    <Compile Include="View\Admin\HomeUnused.aspx.cs">
+      <DependentUpon>HomeUnused.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Customerhome.aspx.designer.cs">
-      <DependentUpon>Customerhome.aspx</DependentUpon>
+    <Compile Include="View\Admin\HomeUnused.aspx.designer.cs">
+      <DependentUpon>HomeUnused.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="View\Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="View\Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\Staff.Master.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\Staff.Master.designer.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -179,12 +209,12 @@
     <Compile Include="View\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Staffhome.aspx.cs">
-      <DependentUpon>Staffhome.aspx</DependentUpon>
+    <Compile Include="View\Staff\HomeUnused.aspx.cs">
+      <DependentUpon>HomeUnused.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Staffhome.aspx.designer.cs">
-      <DependentUpon>Staffhome.aspx</DependentUpon>
+    <Compile Include="View\Staff\HomeUnused.aspx.designer.cs">
+      <DependentUpon>HomeUnused.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\UpdatePage.aspx.cs">
       <DependentUpon>UpdatePage.aspx</DependentUpon>
@@ -203,6 +233,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <Content Include="View\Admin\Admin.Master" />
+    <Content Include="View\Staff\Staff.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

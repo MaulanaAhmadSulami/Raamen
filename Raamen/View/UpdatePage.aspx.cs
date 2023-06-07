@@ -50,7 +50,7 @@ namespace Raamen.View
             Response.Cookies.Add(cookie);
 
 
-            Response.Redirect("Homepage.aspx");
+            Response.Redirect("Welcome.aspx");
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)

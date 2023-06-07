@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
        <div class="navbar">
             <div class="logo">
-                <img src="ramen_nobg.png" alt="Company Logo" class="company-logo" />
+                <img src="assets/ramen_nobg.png" alt="Company Logo" class="company-logo" />
             </div>
             <div class="navbar-items">
                 <ul>

@@ -48,7 +48,7 @@ namespace Raamen.View
 
         protected void btnReturn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Homepage.aspx");
+            Response.Redirect("Welcome.aspx");
         }
     }
 }
