@@ -1,4 +1,6 @@
-﻿using Raamen.Repository;
+﻿using Raamen.Factory;
+using Raamen.Model;
+using Raamen.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,11 @@ namespace Raamen.Handler
         {
             return CartRepository.insert(ramenId, userId);
         }
+        public static string insertNew(int cartId, int ramenId, int quantity)
+        {
+            CartDetail cartDetail = CartFactory.newCartDetail(cartId, ramenId, quantity);
+            return CartRepository.insertNew(cartDetail);
+        }
         public static string delete(int cdId, int userId)
         {
             return CartRepository.delete(cdId, userId);
@@ -23,6 +30,10 @@ namespace Raamen.Handler
         public static string clearCart(int userId)
         {
             return CartRepository.clear(userId);
+        }
+        public static string checkout(int userId)
+        {
+            return CartRepository.checkout(userId);
         }
     }
 }

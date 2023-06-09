@@ -1,4 +1,5 @@
 ﻿using Raamen.Handler;
+using Raamen.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,16 @@ namespace Raamen.View.Customer
 
             status.Text = CartHandler.clearCart(userId);
             Response.Redirect("OrderRamen.aspx");
+        }
+
+        protected void checkout_Click(object sender, EventArgs e)
+        {
+            User user = (User)Session["user"];
+            int userId = user.CustomerId;
+
+            status.Text = CartHandler.checkout(userId);
+            cartGV.DataSource = CartHandler.getUserCartDetail(userId);
+            cartGV.DataBind();
         }
     }
 }

@@ -31,7 +31,7 @@
     </Key>
     <Property Name="HeaderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="StaffId" Type="int" Nullable="false" />
+    <Property Name="StaffId" Type="int" />
     <Property Name="Date" Type="date" />
   </EntityType>
   <EntityType Name="Meat">
