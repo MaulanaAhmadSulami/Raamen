@@ -34,5 +34,28 @@ namespace Raamen.Repository
         {
             return db.Headers.ToList();
         }
+        public static List<Header> getTransactionUnhandled()
+        {
+            return db.Headers.Where(x => x.StaffId == 0).ToList();
+        }
+        public static List<Header> getTransactionHandled()
+        {
+            return db.Headers.Where(x => x.StaffId != 0).ToList();
+        }
+        public static string handleTransaction(int trxId, int staffId)
+        {
+            try
+            {
+                Header header = db.Headers.Where(x => x.HeaderId == trxId).FirstOrDefault();
+                header.StaffId = staffId;
+                db.SaveChanges();
+                return "Transaction handled";
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return "Transaction failed to handle";
+            }
+        }
     }
 }

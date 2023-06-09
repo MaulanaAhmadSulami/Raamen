@@ -18,5 +18,9 @@ namespace Raamen.View.Customer
             detailGV.DataSource = DetailHandler.getTransactionDetail(int.Parse(id));
             detailGV.DataBind();
         }
+        protected void backButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("History.aspx");
+        }
     }
 }

@@ -23,5 +23,17 @@ namespace Raamen.Handler
         {
             return HeaderRepository.getTransactionAll();
         }
+        public static List<Header> getTransactionUnhandled()
+        {
+            return HeaderRepository.getTransactionUnhandled();
+        }
+        public static List<Header> getTransactionHandled()
+        {
+            return HeaderRepository.getTransactionHandled();
+        }
+        public static string handleTransaction(int trxId, int staffId)
+        {
+            return HeaderRepository.handleTransaction(trxId, staffId);
+        }
     }
 }

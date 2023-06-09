@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
+        <asp:Button ID="backButton" runat="server" Text="< Back" OnClick="backButton_Click"/>
         <asp:Label ID="Label1" runat="server" Text="Transaction ID: "></asp:Label>
         <asp:Label ID="trxID" runat="server" Text=""></asp:Label>
     </div>
