@@ -8,6 +8,14 @@ namespace Raamen.Factory
 {
     public class CartFactory
     {
+        public static Cart newCart(int userId)
+        {
+            Cart cart = new Cart
+            {
+                UserId = userId
+            };
+            return cart;
+        }
         public static CartDetail newCartDetail(int cartId, int ramenId, int quantity)
         {
             CartDetail cartDetail = new CartDetail

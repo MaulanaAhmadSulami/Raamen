@@ -95,5 +95,10 @@ namespace Raamen.Repository
                 return "Cart is empty";
             }
         }
+        public static void createCart(Cart cart)
+        {
+            db.Carts.Add(cart);
+            db.SaveChanges();
+        }
     }
 }

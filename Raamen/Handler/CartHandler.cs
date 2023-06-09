@@ -35,5 +35,10 @@ namespace Raamen.Handler
         {
             return CartRepository.checkout(userId);
         }
+        public static void CreateCart(int userId)
+        {
+            Cart cart = CartFactory.newCart(userId);
+            CartRepository.createCart(cart);
+        }
     }
 }
