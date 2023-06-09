@@ -89,6 +89,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="View\Admin\History.aspx" />
+    <Content Include="View\Admin\HistoryDetail.aspx" />
     <Content Include="View\Admin\HomeStyle.css" />
     <Content Include="View\Admin\Home.aspx" />
     <Content Include="View\Admin\NavbarStyle.css" />
@@ -97,9 +99,10 @@
     <Content Include="View\Admin\RamenInsert.aspx" />
     <Content Include="View\Admin\RamenManage.aspx" />
     <Content Include="View\Admin\RamenUpdate.aspx" />
+    <Content Include="View\Customer\History.aspx" />
+    <Content Include="View\Customer\HistoryDetail.aspx" />
     <Content Include="View\Customer\Home.aspx" />
     <Content Include="View\Customer\HomeStyle.css" />
-    <Content Include="View\Customer\HomeUnused.aspx" />
     <Content Include="View\Customer\NavbarStyle.css" />
     <Content Include="View\Customer\OrderRamen.aspx" />
     <Content Include="View\Customer\Profile.aspx" />
@@ -188,6 +191,20 @@
     <Compile Include="View\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\HistoryDetail.aspx.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\HistoryDetail.aspx.designer.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,19 +247,26 @@
     <Compile Include="View\Customer\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
     </Compile>
+    <Compile Include="View\Customer\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\HistoryDetail.aspx.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\HistoryDetail.aspx.designer.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Customer\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Customer\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\Customer\HomeUnused.aspx.cs">
-      <DependentUpon>HomeUnused.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Customer\HomeUnused.aspx.designer.cs">
-      <DependentUpon>HomeUnused.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Customer\OrderRamen.aspx.cs">
       <DependentUpon>OrderRamen.aspx</DependentUpon>

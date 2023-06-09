@@ -15,5 +15,9 @@ namespace Raamen.Repository
             db.SaveChanges();
             return detail;
         }
+        public static List<Detail> getTransactionDetail(int trxID)
+        {
+            return db.Details.Where(x => x.HeaderId == trxID).ToList();
+        }
     }
 }

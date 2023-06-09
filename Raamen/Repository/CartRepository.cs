@@ -88,7 +88,7 @@ namespace Raamen.Repository
                     db.CartDetails.Remove(item);
                 }
                 db.SaveChanges();
-                return "Success";
+                return "Cart successfully checked out";
             }
             else
             {

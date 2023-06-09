@@ -15,5 +15,13 @@ namespace Raamen.Handler
             Header header = HeaderFactory.newHeader(userId);
             return HeaderRepository.insertHeader(header);
         }
+        public static List<Header> getTransactionUser(int userId)
+        {
+            return HeaderRepository.getTransactionUser(userId);
+        }
+        public static List<Header> getTransactionAll()
+        {
+            return HeaderRepository.getTransactionAll();
+        }
     }
 }

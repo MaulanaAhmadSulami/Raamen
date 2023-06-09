@@ -26,5 +26,13 @@ namespace Raamen.Repository
             //db.SaveChanges();
             //return header;
         }
+        public static List<Header> getTransactionUser(int userId)
+        {
+            return db.Headers.Where(x => x.CustomerId == userId).ToList();
+        }
+        public static List<Header> getTransactionAll()
+        {
+            return db.Headers.ToList();
+        }
     }
 }

@@ -15,5 +15,9 @@ namespace Raamen.Handler
             Detail detail = DetailFactory.newDetail(headerId, ramenId, quantity);
             return DetailRepository.insertDetail(detail);
         }
+        public static List<Detail> getTransactionDetail(int trxID)
+        {
+            return DetailRepository.getTransactionDetail(trxID);
+        }
     }
 }
