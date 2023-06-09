@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Raamen.Model
+namespace Raamen
 {
     using System;
     using System.Collections.Generic;

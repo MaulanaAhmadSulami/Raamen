@@ -39,5 +39,6 @@ namespace Raamen.Repository
             db.Ramen.Remove(ramen);
             db.SaveChanges();
         }
+
     }
 }

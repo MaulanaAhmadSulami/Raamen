@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Cart__UserId__49C3F6B7" FromRole="Cart" ToRole="User" />
+    <NavigationProperty Name="CartDetails" Relationship="Self.FK__CartDetai__CartI__4CA06362" FromRole="Cart" ToRole="CartDetail" />
+  </EntityType>
+  <EntityType Name="CartDetail">
+    <Key>
+      <PropertyRef Name="CartDetailId" />
+    </Key>
+    <Property Name="CartDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="Int32" Nullable="false" />
+    <Property Name="RamenId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cart" Relationship="Self.FK__CartDetai__CartI__4CA06362" FromRole="CartDetail" ToRole="Cart" />
+    <NavigationProperty Name="Raman" Relationship="Self.FK__CartDetai__Ramen__4D94879B" FromRole="CartDetail" ToRole="Ramen" />
+  </EntityType>
   <EntityType Name="Detail">
     <Key>
       <PropertyRef Name="HeaderId" />
@@ -39,6 +59,7 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Broth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CartDetails" Relationship="Self.FK__CartDetai__Ramen__4D94879B" FromRole="Ramen" ToRole="CartDetail" />
     <NavigationProperty Name="Details" Relationship="Self.FK__Detail__RamenId__45F365D3" FromRole="Ramen" ToRole="Detail" />
     <NavigationProperty Name="Meat" Relationship="Self.FK__Ramen__MeatId__4222D4EF" FromRole="Ramen" ToRole="Meat" />
   </EntityType>
@@ -60,9 +81,46 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Carts" Relationship="Self.FK__Cart__UserId__49C3F6B7" FromRole="User" ToRole="Cart" />
     <NavigationProperty Name="Headers" Relationship="Self.FK__Header__Customer__3B75D760" FromRole="User" ToRole="Header" />
     <NavigationProperty Name="Role" Relationship="Self.FK__User__RoleId__38996AB5" FromRole="User" ToRole="Role" />
   </EntityType>
+  <Association Name="FK__Cart__UserId__49C3F6B7">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CartDetai__CartI__4CA06362">
+    <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+    <End Role="CartDetail" Type="Self.CartDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cart">
+        <PropertyRef Name="CartId" />
+      </Principal>
+      <Dependent Role="CartDetail">
+        <PropertyRef Name="CartId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CartDetai__Ramen__4D94879B">
+    <End Role="Ramen" Type="Self.Raman" Multiplicity="1" />
+    <End Role="CartDetail" Type="Self.CartDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ramen">
+        <PropertyRef Name="RamenId" />
+      </Principal>
+      <Dependent Role="CartDetail">
+        <PropertyRef Name="RamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__Detail__HeaderId__44FF419A">
     <End Role="Header" Type="Self.Header" Multiplicity="1" />
     <End Role="Detail" Type="Self.Detail" Multiplicity="*" />
@@ -124,12 +182,26 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Carts" EntityType="Self.Cart" />
+    <EntitySet Name="CartDetails" EntityType="Self.CartDetail" />
     <EntitySet Name="Details" EntityType="Self.Detail" />
     <EntitySet Name="Headers" EntityType="Self.Header" />
     <EntitySet Name="Meats" EntityType="Self.Meat" />
     <EntitySet Name="Ramen" EntityType="Self.Raman" />
     <EntitySet Name="Roles" EntityType="Self.Role" />
     <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Cart__UserId__49C3F6B7" Association="Self.FK__Cart__UserId__49C3F6B7">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CartDetai__CartI__4CA06362" Association="Self.FK__CartDetai__CartI__4CA06362">
+      <End Role="Cart" EntitySet="Carts" />
+      <End Role="CartDetail" EntitySet="CartDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CartDetai__Ramen__4D94879B" Association="Self.FK__CartDetai__Ramen__4D94879B">
+      <End Role="Ramen" EntitySet="Ramen" />
+      <End Role="CartDetail" EntitySet="CartDetails" />
+    </AssociationSet>
     <AssociationSet Name="FK__Detail__HeaderId__44FF419A" Association="Self.FK__Detail__HeaderId__44FF419A">
       <End Role="Header" EntitySet="Headers" />
       <End Role="Detail" EntitySet="Details" />

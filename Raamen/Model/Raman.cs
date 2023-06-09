@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Raamen.Model
+namespace Raamen
 {
     using System;
     using System.Collections.Generic;
@@ -17,6 +17,7 @@ namespace Raamen.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Raman()
         {
+            this.CartDetails = new HashSet<CartDetail>();
             this.Details = new HashSet<Detail>();
         }
     
@@ -26,6 +27,8 @@ namespace Raamen.Model
         public string Broth { get; set; }
         public string Price { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CartDetail> CartDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detail> Details { get; set; }
         public virtual Meat Meat { get; set; }
