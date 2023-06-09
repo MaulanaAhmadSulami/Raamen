@@ -99,6 +99,7 @@
     <Content Include="View\Admin\RamenInsert.aspx" />
     <Content Include="View\Admin\RamenManage.aspx" />
     <Content Include="View\Admin\RamenUpdate.aspx" />
+    <Content Include="View\Admin\TransactionsQueue.aspx" />
     <Content Include="View\Customer\History.aspx" />
     <Content Include="View\Customer\HistoryDetail.aspx" />
     <Content Include="View\Customer\Home.aspx" />
@@ -107,6 +108,7 @@
     <Content Include="View\Customer\OrderRamen.aspx" />
     <Content Include="View\Customer\Profile.aspx" />
     <Content Include="View\Customer\ProfileStyle.css" />
+    <Content Include="View\Staff\HistoryDetail.aspx" />
     <Content Include="View\Staff\Home.aspx" />
     <Content Include="View\Staff\NavbarStyle.css" />
     <Content Include="View\Staff\Profile.aspx" />
@@ -114,6 +116,7 @@
     <Content Include="View\Staff\RamenInsert.aspx" />
     <Content Include="View\Staff\RamenManage.aspx" />
     <Content Include="View\Staff\RamenUpdate.aspx" />
+    <Content Include="View\Staff\TransactionsQueue.aspx" />
     <Content Include="View\Welcome.aspx" />
     <Content Include="View\assets\css\Welcome.css" />
     <Content Include="View\Login.aspx" />
@@ -240,6 +243,13 @@
     <Compile Include="View\Admin\RamenUpdate.aspx.designer.cs">
       <DependentUpon>RamenUpdate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\TransactionsQueue.aspx.cs">
+      <DependentUpon>TransactionsQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\TransactionsQueue.aspx.designer.cs">
+      <DependentUpon>TransactionsQueue.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Customer\Customer.Master.cs">
       <DependentUpon>Customer.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +292,13 @@
     <Compile Include="View\Customer\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Staff\HistoryDetail.aspx.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\HistoryDetail.aspx.designer.cs">
+      <DependentUpon>HistoryDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Staff\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -323,6 +340,13 @@
     </Compile>
     <Compile Include="View\Staff\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\TransactionsQueue.aspx.cs">
+      <DependentUpon>TransactionsQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Staff\TransactionsQueue.aspx.designer.cs">
+      <DependentUpon>TransactionsQueue.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
