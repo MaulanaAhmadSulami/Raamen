@@ -16,10 +16,11 @@ namespace Raamen.Repository
             return user;
         }
 
-        public static void RegistUser(User user)
+        public static int RegistUser(User user)
         {
             db.Users.Add(user);
             db.SaveChanges();
+            return user.CustomerId;
         }
         public static List<User> GetCustomers()
         {

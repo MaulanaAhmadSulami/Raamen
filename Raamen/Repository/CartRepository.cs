@@ -1,4 +1,5 @@
-﻿using Raamen.Model;
+﻿using Raamen.Handler;
+using Raamen.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,15 +31,14 @@ namespace Raamen.Repository
             }
             else
             {
-
-                CartDetail cartD = new CartDetail();
-                cartD.CartId = cart.CartId;
-                cartD.RamenId = ramenId;
-                cartD.Quantity = 1;
-                db.CartDetails.Add(cartD);
-                db.SaveChanges();
-                return "Success";
+                return CartHandler.insertNew(cart.CartId, ramenId, 1);
             }
+        }
+        public static string insertNew(CartDetail cartD)
+        {
+            db.CartDetails.Add(cartD);
+            db.SaveChanges();
+            return "Success";
         }
         public static string delete(int cdId, int userId)
         {
@@ -73,5 +73,32 @@ namespace Raamen.Repository
                 return "Failed";
             }
         }   
+        public static string checkout(int userId)
+        {
+            Cart cart = getUserCart(userId);
+            List<CartDetail> cartDS = db.CartDetails.Where(x => x.CartId == cart.CartId).ToList();
+            if (cartDS != null)
+            {
+                Header header = HeaderHandler.insertHeader(userId);
+                foreach (var item in cartDS)
+                {
+                    int ramenId = item.RamenId;
+                    int quantity = item.Quantity;
+                    Detail detail = DetailHandler.insertDetail(header.HeaderId, ramenId, quantity);
+                    db.CartDetails.Remove(item);
+                }
+                db.SaveChanges();
+                return "Cart successfully checked out";
+            }
+            else
+            {
+                return "Cart is empty";
+            }
+        }
+        public static void createCart(Cart cart)
+        {
+            db.Carts.Add(cart);
+            db.SaveChanges();
+        }
     }
 }

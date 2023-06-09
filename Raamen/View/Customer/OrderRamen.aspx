@@ -37,5 +37,6 @@
                 </Columns>
             </asp:GridView>
             <asp:Button ID="clearCart" runat="server" Text="Clear Cart" OnClick="clearCart_Click"/>
+            <asp:Button ID="checkout" runat="server" Text="Buy Cart" OnClick="checkout_Click"/>
     </div>
 </asp:Content>

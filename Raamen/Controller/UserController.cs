@@ -54,7 +54,8 @@ namespace Raamen.Controller
                 else
                 {
                     User customerUser = UserFactory.createUser(username, email, gender, password, 4); // RoleId 4 for customers
-                    UserRepository.RegistUser(customerUser);
+                    int userId = UserRepository.RegistUser(customerUser);
+                    CartHandler.CreateCart(userId);
                 }
                 //User user = Factory.UserFactory.createUser(username, email, gender, password, 4);
                 //db.Users.Add(user);

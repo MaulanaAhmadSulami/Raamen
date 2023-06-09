@@ -37,7 +37,7 @@
     </Key>
     <Property Name="HeaderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="StaffId" Type="Int32" Nullable="false" />
+    <Property Name="StaffId" Type="Int32" Nullable="true" />
     <Property Name="Date" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Details" Relationship="Self.FK__Detail__HeaderId__44FF419A" FromRole="Header" ToRole="Detail" />
     <NavigationProperty Name="User" Relationship="Self.FK__Header__Customer__3B75D760" FromRole="Header" ToRole="User" />

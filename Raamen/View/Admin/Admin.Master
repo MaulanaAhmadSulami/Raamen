@@ -20,7 +20,7 @@
                     <li><a href="RamenManage.aspx">Manage Ramen</a></li>
                     <li><a href="#">Order Queue</a></li>
                     <li><a href="Profile.aspx">Profile</a></li>
-                    <li><a href="#">History</a></li>
+                    <li><a href="History.aspx">History</a></li>
                 </ul>
             </div>
             <div class="navbar-items navbar-right">
