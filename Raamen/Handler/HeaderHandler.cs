@@ -19,7 +19,7 @@ namespace Raamen.Handler
         {
             return HeaderRepository.getTransactionUser(userId);
         }
-        public static List<Header> getTransactionAll()
+        public static List<Header> getTransactionAll() // this one report
         {
             return HeaderRepository.getTransactionAll();
         }

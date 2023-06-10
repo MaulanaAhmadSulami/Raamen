@@ -25,7 +25,7 @@
             </div>
             <div class="navbar-items navbar-right">
                 <ul>
-                    <li><a href="#">Report</a></li>
+                    <li><a href="ReportView.aspx">Report</a></li>
                     <li><asp:Label ID="Label1" runat="server" Text="Hello! How are you," CssClass="greet_lbl"></asp:Label></li>
                     <li><asp:Label ID="name" runat="server" Text="" CssClass="greets_userlbl"></asp:Label></li>
                     <li><asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" /></li>

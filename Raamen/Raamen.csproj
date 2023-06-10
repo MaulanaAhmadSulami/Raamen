@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -91,6 +95,7 @@
     </Content>
     <Content Include="View\Admin\History.aspx" />
     <Content Include="View\Admin\HistoryDetail.aspx" />
+    <Content Include="View\Admin\History_ForTrx2.aspx" />
     <Content Include="View\Admin\HomeStyle.css" />
     <Content Include="View\Admin\Home.aspx" />
     <Content Include="View\Admin\NavbarStyle.css" />
@@ -99,6 +104,7 @@
     <Content Include="View\Admin\RamenInsert.aspx" />
     <Content Include="View\Admin\RamenManage.aspx" />
     <Content Include="View\Admin\RamenUpdate.aspx" />
+    <Content Include="View\Admin\ReportView.aspx" />
     <Content Include="View\Admin\TransactionsQueue.aspx" />
     <Content Include="View\Customer\History.aspx" />
     <Content Include="View\Customer\HistoryDetail.aspx" />
@@ -132,6 +138,11 @@
   <ItemGroup>
     <Compile Include="Controller\RamenController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Dataset\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\DetailFactory.cs" />
     <Compile Include="Factory\HeaderFactory.cs" />
@@ -208,6 +219,13 @@
     <Compile Include="View\Admin\HistoryDetail.aspx.designer.cs">
       <DependentUpon>HistoryDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\History_ForTrx2.aspx.cs">
+      <DependentUpon>History_ForTrx2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\History_ForTrx2.aspx.designer.cs">
+      <DependentUpon>History_ForTrx2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -242,6 +260,13 @@
     </Compile>
     <Compile Include="View\Admin\RamenUpdate.aspx.designer.cs">
       <DependentUpon>RamenUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\ReportView.aspx.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\ReportView.aspx.designer.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\TransactionsQueue.aspx.cs">
       <DependentUpon>TransactionsQueue.aspx</DependentUpon>
@@ -385,6 +410,17 @@
     <Content Include="Model\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Dataset\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="View\Admin\Admin.Master" />
     <Content Include="View\Staff\Staff.Master" />
@@ -396,9 +432,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

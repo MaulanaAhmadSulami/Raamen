@@ -40,8 +40,11 @@ namespace Raamen.View.Admin
                 int index = Convert.ToInt32(e.CommandArgument.ToString());
                 GridViewRow gvr = handledGV.Rows[index];
                 string id = gvr.Cells[0].Text;
-                Response.Redirect("HistoryDetail.aspx?id=" + id);
+                //Response.Redirect("HistoryDetail.aspx?id=" + id);
+                Response.Redirect("History_ForTrx2.aspx?id=" + id);
             }
+          
+
         }
     }
 }

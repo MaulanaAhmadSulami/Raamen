@@ -30,7 +30,7 @@ namespace Raamen.Repository
         {
             return db.Headers.Where(x => x.CustomerId == userId).ToList();
         }
-        public static List<Header> getTransactionAll()
+        public static List<Header> getTransactionAll() //this one report
         {
             return db.Headers.ToList();
         }
