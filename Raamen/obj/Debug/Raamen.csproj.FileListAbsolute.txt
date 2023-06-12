@@ -204,3 +204,20 @@ C:\Users\fFf\source\repos\Ramen_Radit\Raamen\Raamen\bin\CrystalDecisions.ReportA
 C:\Users\fFf\source\repos\Ramen_Radit\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\fFf\source\repos\Ramen_Radit\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\fFf\source\repos\Ramen_Radit\Raamen\Raamen\bin\stdole.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportSource.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.Shared.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.Web.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\bandu\Documents\#BINUS\Semester 4\Pattern Software Design\LAB\PROJECT\git\Raamen\Raamen\bin\stdole.dll

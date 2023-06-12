@@ -79,5 +79,10 @@ namespace Raamen.View
                 lblError.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        protected void backBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Welcome.aspx");
+        }
     }
 }
