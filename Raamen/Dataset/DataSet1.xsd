@@ -22,17 +22,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ramen" msprop:Generator_TableClassName="RamenDataTable" msprop:Generator_TableVarName="tableRamen" msprop:Generator_TablePropName="Ramen" msprop:Generator_RowDeletingName="RamenRowDeleting" msprop:Generator_RowChangingName="RamenRowChanging" msprop:Generator_RowEvHandlerName="RamenRowChangeEventHandler" msprop:Generator_RowDeletedName="RamenRowDeleted" msprop:Generator_UserTableName="Ramen" msprop:Generator_RowChangedName="RamenRowChanged" msprop:Generator_RowEvArgName="RamenRowChangeEvent" msprop:Generator_RowClassName="RamenRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="RamenId" msprop:Generator_ColumnVarNameInTable="columnRamenId" msprop:Generator_ColumnPropNameInRow="RamenId" msprop:Generator_ColumnPropNameInTable="RamenIdColumn" msprop:Generator_UserColumnName="RamenId" type="xs:string" minOccurs="0" />
-              <xs:element name="MeatId" msprop:Generator_ColumnVarNameInTable="columnMeatId" msprop:Generator_ColumnPropNameInRow="MeatId" msprop:Generator_ColumnPropNameInTable="MeatIdColumn" msprop:Generator_UserColumnName="MeatId" type="xs:string" minOccurs="0" />
-              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
-              <xs:element name="Broth" msprop:Generator_ColumnVarNameInTable="columnBroth" msprop:Generator_ColumnPropNameInRow="Broth" msprop:Generator_ColumnPropNameInTable="BrothColumn" msprop:Generator_UserColumnName="Broth" type="xs:string" minOccurs="0" />
-              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="Detail" msprop:Generator_TableClassName="DetailDataTable" msprop:Generator_TableVarName="tableDetail" msprop:Generator_TablePropName="Detail" msprop:Generator_RowDeletingName="DetailRowDeleting" msprop:Generator_RowChangingName="DetailRowChanging" msprop:Generator_RowEvHandlerName="DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailRowDeleted" msprop:Generator_UserTableName="Detail" msprop:Generator_RowChangedName="DetailRowChanged" msprop:Generator_RowEvArgName="DetailRowChangeEvent" msprop:Generator_RowClassName="DetailRow">
           <xs:complexType>
             <xs:sequence>
@@ -47,8 +36,7 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Detail_Header" msdata:parent="Detail" msdata:child="Header" msdata:parentkey="HeaderId" msdata:childkey="HeaderId" msprop:Generator_UserChildTable="Header" msprop:Generator_ChildPropName="GetHeaderRows" msprop:Generator_UserRelationName="Detail_Header" msprop:Generator_RelationVarName="relationDetail_Header" msprop:Generator_UserParentTable="Detail" msprop:Generator_ParentPropName="DetailRow" />
-      <msdata:Relationship name="Detail_Ramen" msdata:parent="Detail" msdata:child="Ramen" msdata:parentkey="HeaderId" msdata:childkey="RamenId" msprop:Generator_UserChildTable="Ramen" msprop:Generator_ChildPropName="GetRamenRows" msprop:Generator_UserRelationName="Detail_Ramen" msprop:Generator_RelationVarName="relationDetail_Ramen" msprop:Generator_UserParentTable="Detail" msprop:Generator_ParentPropName="DetailRow" />
+      <msdata:Relationship name="Detail_Header" msdata:parent="Header" msdata:child="Detail" msdata:parentkey="HeaderId" msdata:childkey="HeaderId" msprop:Generator_UserChildTable="Detail" msprop:Generator_ChildPropName="GetDetailRows" msprop:Generator_UserRelationName="Detail_Header" msprop:Generator_ParentPropName="HeaderRow" msprop:Generator_RelationVarName="relationDetail_Header" msprop:Generator_UserParentTable="Header" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

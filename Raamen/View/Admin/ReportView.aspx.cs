@@ -15,40 +15,36 @@ namespace Raamen.View.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         
-                CrystalReport1 report = new CrystalReport1();
 
-                CrystalReportViewer.ReportSource = report;
+            CrystalReport1 report = new CrystalReport1();
 
-            List<Header> headerList = ReportHandler.GetAllTransactions();
-            List<Raman> ramenList = ReportHandler.GetAllRamen();
+            DataSet1 data = getDataSet(ReportHandler.GetAllTransactions());
+            report.SetDataSource(data);
 
-            DataSet1 data = getDataSet(headerList, ramenList);
-                report.SetDataSource(data);
+            CrystalReportViewer.ReportSource = report;
 
         }
 
         private DataSet1
 
-           getDataSet(List<Header> Header_list, List<Raman> Ramen_list)
+         getDataSet(List<Header> Header_list)
         {
             DataSet1 data = new DataSet1();
 
             var HeaderTable = data.Header;
             var DetailTable = data.Detail;
-            var DetailTablex2 = data.Ramen;
 
-            foreach(Header rm in Header_list)
+            foreach (Header rm in Header_list)
             {
                 var hrow = HeaderTable.NewRow();
                 hrow["HeaderId"] = rm.HeaderId;
                 hrow["CustomerId"] = rm.CustomerId;
                 hrow["StaffId"] = rm.StaffId;
                 hrow["Date"] = rm.Date;
-                
+
                 HeaderTable.Rows.Add(hrow);
 
-                foreach(Detail cd in rm.Details)
+                foreach (Detail cd in rm.Details)
                 {
                     var drow = DetailTable.NewRow();
                     drow["HeaderId"] = cd.HeaderId;
@@ -58,14 +54,6 @@ namespace Raamen.View.Admin
                     DetailTable.Rows.Add(drow);
                 }
 
-            }
-
-            foreach(Raman ramen in Ramen_list)
-            {
-                var rrow = DetailTablex2.NewRow();
-                rrow["RamenId"] = ramen.RamenId;
-                rrow["Name"] = ramen.Name;
-                rrow["Price"] = ramen.Price;
             }
 
             return data;
