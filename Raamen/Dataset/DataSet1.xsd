@@ -12,26 +12,7 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Detail" msprop:Generator_TableClassName="DetailDataTable" msprop:Generator_TableVarName="tableDetail" msprop:Generator_TablePropName="Detail" msprop:Generator_RowDeletingName="DetailRowDeleting" msprop:Generator_RowChangingName="DetailRowChanging" msprop:Generator_RowEvHandlerName="DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailRowDeleted" msprop:Generator_UserTableName="Detail" msprop:Generator_RowChangedName="DetailRowChanged" msprop:Generator_RowEvArgName="DetailRowChangeEvent" msprop:Generator_RowClassName="DetailRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="CartId" msprop:Generator_ColumnVarNameInTable="columnCartId" msprop:Generator_ColumnPropNameInRow="CartId" msprop:Generator_ColumnPropNameInTable="CartIdColumn" msprop:Generator_UserColumnName="CartId" type="xs:string" minOccurs="0" />
-              <xs:element name="RamenId" msprop:Generator_ColumnVarNameInTable="columnRamenId" msprop:Generator_ColumnPropNameInRow="RamenId" msprop:Generator_ColumnPropNameInTable="RamenIdColumn" msprop:Generator_UserColumnName="RamenId" type="xs:string" minOccurs="0" />
-              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="CartDetail" msprop:Generator_TableClassName="CartDetailDataTable" msprop:Generator_TableVarName="tableCartDetail" msprop:Generator_RowChangedName="CartDetailRowChanged" msprop:Generator_TablePropName="CartDetail" msprop:Generator_RowDeletingName="CartDetailRowDeleting" msprop:Generator_RowChangingName="CartDetailRowChanging" msprop:Generator_RowEvHandlerName="CartDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="CartDetailRowDeleted" msprop:Generator_RowClassName="CartDetailRow" msprop:Generator_UserTableName="CartDetail" msprop:Generator_RowEvArgName="CartDetailRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="CartDetailId" msprop:Generator_ColumnVarNameInTable="columnCartDetailId" msprop:Generator_ColumnPropNameInRow="CartDetailId" msprop:Generator_ColumnPropNameInTable="CartDetailIdColumn" msprop:Generator_UserColumnName="CartDetailId" type="xs:string" minOccurs="0" />
-              <xs:element name="CartId" msprop:Generator_ColumnVarNameInTable="columnCartId" msprop:Generator_ColumnPropNameInRow="CartId" msprop:Generator_ColumnPropNameInTable="CartIdColumn" msprop:Generator_UserColumnName="CartId" type="xs:string" minOccurs="0" />
-              <xs:element name="RamenId" msprop:Generator_ColumnVarNameInTable="columnRamenId" msprop:Generator_ColumnPropNameInRow="RamenId" msprop:Generator_ColumnPropNameInTable="RamenIdColumn" msprop:Generator_UserColumnName="RamenId" type="xs:string" minOccurs="0" />
-              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Header" msprop:Generator_TableClassName="HeaderDataTable" msprop:Generator_TableVarName="tableHeader" msprop:Generator_RowChangedName="HeaderRowChanged" msprop:Generator_TablePropName="Header" msprop:Generator_RowDeletingName="HeaderRowDeleting" msprop:Generator_RowChangingName="HeaderRowChanging" msprop:Generator_RowEvHandlerName="HeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="HeaderRowDeleted" msprop:Generator_RowClassName="HeaderRow" msprop:Generator_UserTableName="Header" msprop:Generator_RowEvArgName="HeaderRowChangeEvent">
+        <xs:element name="Header" msprop:Generator_TableClassName="HeaderDataTable" msprop:Generator_TableVarName="tableHeader" msprop:Generator_TablePropName="Header" msprop:Generator_RowDeletingName="HeaderRowDeleting" msprop:Generator_RowChangingName="HeaderRowChanging" msprop:Generator_RowEvHandlerName="HeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="HeaderRowDeleted" msprop:Generator_UserTableName="Header" msprop:Generator_RowChangedName="HeaderRowChanged" msprop:Generator_RowEvArgName="HeaderRowChangeEvent" msprop:Generator_RowClassName="HeaderRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HeaderId" msprop:Generator_ColumnVarNameInTable="columnHeaderId" msprop:Generator_ColumnPropNameInRow="HeaderId" msprop:Generator_ColumnPropNameInTable="HeaderIdColumn" msprop:Generator_UserColumnName="HeaderId" type="xs:string" minOccurs="0" />
@@ -41,7 +22,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ramen" msprop:Generator_TableClassName="RamenDataTable" msprop:Generator_TableVarName="tableRamen" msprop:Generator_RowChangedName="RamenRowChanged" msprop:Generator_TablePropName="Ramen" msprop:Generator_RowDeletingName="RamenRowDeleting" msprop:Generator_RowChangingName="RamenRowChanging" msprop:Generator_RowEvHandlerName="RamenRowChangeEventHandler" msprop:Generator_RowDeletedName="RamenRowDeleted" msprop:Generator_RowClassName="RamenRow" msprop:Generator_UserTableName="Ramen" msprop:Generator_RowEvArgName="RamenRowChangeEvent">
+        <xs:element name="Ramen" msprop:Generator_TableClassName="RamenDataTable" msprop:Generator_TableVarName="tableRamen" msprop:Generator_TablePropName="Ramen" msprop:Generator_RowDeletingName="RamenRowDeleting" msprop:Generator_RowChangingName="RamenRowChanging" msprop:Generator_RowEvHandlerName="RamenRowChangeEventHandler" msprop:Generator_RowDeletedName="RamenRowDeleted" msprop:Generator_UserTableName="Ramen" msprop:Generator_RowChangedName="RamenRowChanged" msprop:Generator_RowEvArgName="RamenRowChangeEvent" msprop:Generator_RowClassName="RamenRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RamenId" msprop:Generator_ColumnVarNameInTable="columnRamenId" msprop:Generator_ColumnPropNameInRow="RamenId" msprop:Generator_ColumnPropNameInTable="RamenIdColumn" msprop:Generator_UserColumnName="RamenId" type="xs:string" minOccurs="0" />
@@ -52,14 +33,22 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Detail" msprop:Generator_TableClassName="DetailDataTable" msprop:Generator_TableVarName="tableDetail" msprop:Generator_TablePropName="Detail" msprop:Generator_RowDeletingName="DetailRowDeleting" msprop:Generator_RowChangingName="DetailRowChanging" msprop:Generator_RowEvHandlerName="DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailRowDeleted" msprop:Generator_UserTableName="Detail" msprop:Generator_RowChangedName="DetailRowChanged" msprop:Generator_RowEvArgName="DetailRowChangeEvent" msprop:Generator_RowClassName="DetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HeaderId" msprop:Generator_ColumnVarNameInTable="columnHeaderId" msprop:Generator_ColumnPropNameInRow="HeaderId" msprop:Generator_ColumnPropNameInTable="HeaderIdColumn" msprop:Generator_UserColumnName="HeaderId" type="xs:string" minOccurs="0" />
+              <xs:element name="RamenId" msprop:Generator_ColumnVarNameInTable="columnRamenId" msprop:Generator_ColumnPropNameInRow="RamenId" msprop:Generator_ColumnPropNameInTable="RamenIdColumn" msprop:Generator_UserColumnName="RamenId" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Header_CartDetail" msdata:parent="Header" msdata:child="CartDetail" msdata:parentkey="HeaderId" msdata:childkey="CartDetailId" msprop:Generator_UserChildTable="CartDetail" msprop:Generator_ChildPropName="GetCartDetailRows" msprop:Generator_UserRelationName="Header_CartDetail" msprop:Generator_ParentPropName="HeaderRow" msprop:Generator_RelationVarName="relationHeader_CartDetail" msprop:Generator_UserParentTable="Header" />
-      <msdata:Relationship name="CartDetail_Detail" msdata:parent="CartDetail" msdata:child="Detail" msdata:parentkey="CartDetailId" msdata:childkey="CartId" msprop:Generator_UserChildTable="Detail" msprop:Generator_ChildPropName="GetDetailRows" msprop:Generator_UserRelationName="CartDetail_Detail" msprop:Generator_ParentPropName="CartDetailRow" msprop:Generator_RelationVarName="relationCartDetail_Detail" msprop:Generator_UserParentTable="CartDetail" />
-      <msdata:Relationship name="Ramen_CartDetail" msdata:parent="CartDetail" msdata:child="Ramen" msdata:parentkey="RamenId" msdata:childkey="RamenId" msprop:Generator_UserChildTable="Ramen" msprop:Generator_ChildPropName="GetRamenRows" msprop:Generator_UserRelationName="Ramen_CartDetail" msprop:Generator_ParentPropName="CartDetailRow" msprop:Generator_RelationVarName="relationRamen_CartDetail" msprop:Generator_UserParentTable="CartDetail" />
+      <msdata:Relationship name="Detail_Header" msdata:parent="Detail" msdata:child="Header" msdata:parentkey="HeaderId" msdata:childkey="HeaderId" msprop:Generator_UserChildTable="Header" msprop:Generator_ChildPropName="GetHeaderRows" msprop:Generator_UserRelationName="Detail_Header" msprop:Generator_RelationVarName="relationDetail_Header" msprop:Generator_UserParentTable="Detail" msprop:Generator_ParentPropName="DetailRow" />
+      <msdata:Relationship name="Detail_Ramen" msdata:parent="Detail" msdata:child="Ramen" msdata:parentkey="HeaderId" msdata:childkey="RamenId" msprop:Generator_UserChildTable="Ramen" msprop:Generator_ChildPropName="GetRamenRows" msprop:Generator_UserRelationName="Detail_Ramen" msprop:Generator_RelationVarName="relationDetail_Ramen" msprop:Generator_UserParentTable="Detail" msprop:Generator_ParentPropName="DetailRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

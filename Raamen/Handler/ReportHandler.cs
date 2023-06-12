@@ -9,9 +9,15 @@ namespace Raamen.Handler
 {   
     public class ReportHandler
     {
-        public static List<Raman> GetRamen()
+        public static List<Header> GetAllTransactions()
         {
-            return ReportRepository.GetRamen();
+            return ReportRepository.GetAllTransactions();
         }
+
+        public static List<Raman> GetAllRamen()
+        {
+            return ReportRepository.GetAllRamen();
+        }
+        
     }
 }

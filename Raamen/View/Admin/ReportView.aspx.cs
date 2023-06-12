@@ -20,41 +20,52 @@ namespace Raamen.View.Admin
 
                 CrystalReportViewer.ReportSource = report;
 
-                DataSet1 data = getDataSet(ReportHandler.GetRamen());
+            List<Header> headerList = ReportHandler.GetAllTransactions();
+            List<Raman> ramenList = ReportHandler.GetAllRamen();
+
+            DataSet1 data = getDataSet(headerList, ramenList);
                 report.SetDataSource(data);
 
         }
 
         private DataSet1
 
-           getDataSet(List<Raman> ramen_list)
+           getDataSet(List<Header> Header_list, List<Raman> Ramen_list)
         {
             DataSet1 data = new DataSet1();
 
-            var HeaderTable = data.Ramen;
-            var DetailTable = data.CartDetail;
+            var HeaderTable = data.Header;
+            var DetailTable = data.Detail;
+            var DetailTablex2 = data.Ramen;
 
-            foreach(Raman rm in ramen_list)
+            foreach(Header rm in Header_list)
             {
                 var hrow = HeaderTable.NewRow();
-                hrow["RamenId"] = rm.RamenId;
-                hrow["MeatId"] = rm.MeatId;
-                hrow["Name"] = rm.Name;
-                hrow["Broth"] = rm.Broth;
-                hrow["Price"] = rm.Price;
-
+                hrow["HeaderId"] = rm.HeaderId;
+                hrow["CustomerId"] = rm.CustomerId;
+                hrow["StaffId"] = rm.StaffId;
+                hrow["Date"] = rm.Date;
+                
                 HeaderTable.Rows.Add(hrow);
 
-                foreach(CartDetail cd in rm.CartDetails)
+                foreach(Detail cd in rm.Details)
                 {
                     var drow = DetailTable.NewRow();
-                    drow["CartDetailId"] = cd.CartDetailId;
-                    drow["CartId"] = cd.CartId;
+                    drow["HeaderId"] = cd.HeaderId;
                     drow["RamenId"] = cd.RamenId;
                     drow["Quantity"] = cd.Quantity;
 
                     DetailTable.Rows.Add(drow);
                 }
+
+            }
+
+            foreach(Raman ramen in Ramen_list)
+            {
+                var rrow = DetailTablex2.NewRow();
+                rrow["RamenId"] = ramen.RamenId;
+                rrow["Name"] = ramen.Name;
+                rrow["Price"] = ramen.Price;
             }
 
             return data;
