@@ -6,5 +6,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
+    <CR:CrystalReportViewer ID="CrystalReportViewer" runat="server" AutoDataBind="true" />
 </asp:Content>
