@@ -4,34 +4,55 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="NavbarStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/global.css" rel="stylesheet" type="text/css"/>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #7EC5F0 !important
+        }
+
+        .logoutBtn{
+            height: 32px;
+        }
+
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="navbar">
-            <div class="logo">
-                <img src="/View/assets/ramen_nobg.png" alt="Company Logo" class="company-logo" />
+        <nav class="navbar py-0">
+            <div class="container-fluid">
+                <div class="d-flex navbar-brand justify-content-start">
+                    <img src="/View/assets/ramen_nobg.png" alt="Company Logo" class="company-logo" height="60" />
+                </div>
+                <div class="d-inline-flex justify-content-center">
+                        <a class="nav-link me-3 fs-3" href="Home.aspx">Home</a>
+                        <a class="nav-link me-3 fs-3" href="RamenManage.aspx">Manage Ramen</a>
+                        <a class="nav-link me-3 fs-3" href="TransactionsQueue.aspx">Order Queue</a>
+                        <a class="nav-link me-3 fs-3" href="Profile.aspx">Profile</a>
+                        <a class="nav-link me-3 fs-3" href="History.aspx">History</a>
+                </div>
+                <div class="d-inline-flex justify-content-end">
+                        <a class="nav-link me-3 fs-3" href="ReportView.aspx">Report</a>
+                        <asp:Label ID="Label1" runat="server" Text="Hello! How are you," CssClass="d-flex align-items-center me-1 fs-6"></asp:Label>
+                        <asp:Label ID="name" runat="server" Text="" CssClass="d-flex align-items-center fs-6 me-3"></asp:Label>
+                        <div class=" d-flex align-items-center ">
+                            <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" CssClass="btn btn-secondary btn-sm logoutBtn"/>
+                        </div>
+                </div>
             </div>
-            <div class="navbar-items">
-                <ul>
-                    <li><a href="Home.aspx">Home</a></li>
-                    <li><a href="RamenManage.aspx">Manage Ramen</a></li>
-                    <li><a href="TransactionsQueue.aspx">Order Queue</a></li>
-                    <li><a href="Profile.aspx">Profile</a></li>
-                    <li><a href="History.aspx">History</a></li>
-                </ul>
-            </div>
-            <div class="navbar-items navbar-right">
-                <ul>
-                    <li><a href="ReportView.aspx">Report</a></li>
-                    <li><asp:Label ID="Label1" runat="server" Text="Hello! How are you," CssClass="greet_lbl"></asp:Label></li>
-                    <li><asp:Label ID="name" runat="server" Text="" CssClass="greets_userlbl"></asp:Label></li>
-                    <li><asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" /></li>
-                </ul>
-            </div>
-        </div>
+        </nav>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
