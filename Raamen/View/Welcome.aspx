@@ -8,7 +8,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <style>
         .container-custom {
-            max-width: 480px;
+            width: 480px;
             padding: 36px !important;
             background-color: #fff;
             border-radius: 4px;

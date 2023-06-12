@@ -1281,7 +1281,6 @@
     <Content Include="View\Register.aspx" />
     <Content Include="View\assets\css\Regist.css" />
     <Content Include="View\Staff\HomeStyle.css" />
-    <Content Include="View\assets\css\Update.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

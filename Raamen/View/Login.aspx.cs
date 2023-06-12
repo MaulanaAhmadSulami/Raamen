@@ -1,5 +1,6 @@
 ﻿using Raamen.Controller;
 using Raamen.Model;
+using Raamen.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Raamen.View
                 int getId = ifCookie.IndexOf('-') + 1;
                 int getUserId = int.Parse(ifCookie.Substring(getId));
 
-                User user = (from u in db.Users where u.CustomerId.Equals(getUserId) select u).FirstOrDefault();
+                User user = UserRepository.getUserById(getUserId);
 
                 if(user.RoleId == 1)
                 {

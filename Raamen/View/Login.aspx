@@ -7,7 +7,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <style>
         .container-custom {
-            max-width: 400px;
+            width: 360px;
             padding: 36px !important;
             background-color: #fff;
             border-radius: 4px;
@@ -24,7 +24,7 @@
                         <div class="col-2 justify-content-start px-0">
                             <asp:Button ID="backBtn" runat="server" Text="<" OnClick="backBtn_Click" CssClass="btn btn-light btn-sm"/>
                         </div>
-                        <div class="col ms-4 justify-content-center">
+                        <div class="col ms-5 justify-content-center">
                             <h1 class="fs-4 mb-5 fw-bold">Login</h1>
                         </div>
                     </div>
