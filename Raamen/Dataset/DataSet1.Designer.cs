@@ -34,9 +34,9 @@ namespace Raamen.Dataset {
         
         private global::System.Data.DataRelation relationHeader_CartDetail;
         
-        private global::System.Data.DataRelation relationRamen_CartDetail;
-        
         private global::System.Data.DataRelation relationCartDetail_Detail;
+        
+        private global::System.Data.DataRelation relationRamen_CartDetail;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -273,8 +273,8 @@ namespace Raamen.Dataset {
                 }
             }
             this.relationHeader_CartDetail = this.Relations["Header_CartDetail"];
-            this.relationRamen_CartDetail = this.Relations["Ramen_CartDetail"];
             this.relationCartDetail_Detail = this.Relations["CartDetail_Detail"];
+            this.relationRamen_CartDetail = this.Relations["Ramen_CartDetail"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -297,14 +297,14 @@ namespace Raamen.Dataset {
                         this.tableHeader.HeaderIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableCartDetail.CartDetailIdColumn}, false);
             this.Relations.Add(this.relationHeader_CartDetail);
-            this.relationRamen_CartDetail = new global::System.Data.DataRelation("Ramen_CartDetail", new global::System.Data.DataColumn[] {
-                        this.tableRamen.RamenIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCartDetail.RamenIdColumn}, false);
-            this.Relations.Add(this.relationRamen_CartDetail);
             this.relationCartDetail_Detail = new global::System.Data.DataRelation("CartDetail_Detail", new global::System.Data.DataColumn[] {
                         this.tableCartDetail.CartDetailIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetail.CartIdColumn}, false);
             this.Relations.Add(this.relationCartDetail_Detail);
+            this.relationRamen_CartDetail = new global::System.Data.DataRelation("Ramen_CartDetail", new global::System.Data.DataColumn[] {
+                        this.tableCartDetail.RamenIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRamen.RamenIdColumn}, false);
+            this.Relations.Add(this.relationRamen_CartDetail);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -793,18 +793,15 @@ namespace Raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CartDetailRow AddCartDetailRow(HeaderRow parentHeaderRowByHeader_CartDetail, string CartId, RamenRow parentRamenRowByRamen_CartDetail, string Quantity) {
+            public CartDetailRow AddCartDetailRow(HeaderRow parentHeaderRowByHeader_CartDetail, string CartId, string RamenId, string Quantity) {
                 CartDetailRow rowCartDetailRow = ((CartDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CartId,
-                        null,
+                        RamenId,
                         Quantity};
                 if ((parentHeaderRowByHeader_CartDetail != null)) {
                     columnValuesArray[0] = parentHeaderRowByHeader_CartDetail[0];
-                }
-                if ((parentRamenRowByRamen_CartDetail != null)) {
-                    columnValuesArray[2] = parentRamenRowByRamen_CartDetail[0];
                 }
                 rowCartDetailRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCartDetailRow);
@@ -1387,14 +1384,17 @@ namespace Raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RamenRow AddRamenRow(string RamenId, string MeatId, string Name, string Broth, string Price) {
+            public RamenRow AddRamenRow(CartDetailRow parentCartDetailRowByRamen_CartDetail, string MeatId, string Name, string Broth, string Price) {
                 RamenRow rowRamenRow = ((RamenRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        RamenId,
+                        null,
                         MeatId,
                         Name,
                         Broth,
                         Price};
+                if ((parentCartDetailRowByRamen_CartDetail != null)) {
+                    columnValuesArray[0] = parentCartDetailRowByRamen_CartDetail[2];
+                }
                 rowRamenRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRamenRow);
                 return rowRamenRow;
@@ -1764,17 +1764,6 @@ namespace Raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RamenRow RamenRow {
-                get {
-                    return ((RamenRow)(this.GetParentRow(this.Table.ParentRelations["Ramen_CartDetail"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Ramen_CartDetail"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCartDetailIdNull() {
                 return this.IsNull(this.tableCartDetail.CartDetailIdColumn);
             }
@@ -1829,6 +1818,17 @@ namespace Raamen.Dataset {
                 }
                 else {
                     return ((DetailRow[])(base.GetChildRows(this.Table.ChildRelations["CartDetail_Detail"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public RamenRow[] GetRamenRows() {
+                if ((this.Table.ChildRelations["Ramen_CartDetail"] == null)) {
+                    return new RamenRow[0];
+                }
+                else {
+                    return ((RamenRow[])(base.GetChildRows(this.Table.ChildRelations["Ramen_CartDetail"])));
                 }
             }
         }
@@ -2067,6 +2067,17 @@ namespace Raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CartDetailRow CartDetailRow {
+                get {
+                    return ((CartDetailRow)(this.GetParentRow(this.Table.ParentRelations["Ramen_CartDetail"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Ramen_CartDetail"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsRamenIdNull() {
                 return this.IsNull(this.tableRamen.RamenIdColumn);
             }
@@ -2123,17 +2134,6 @@ namespace Raamen.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPriceNull() {
                 this[this.tableRamen.PriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CartDetailRow[] GetCartDetailRows() {
-                if ((this.Table.ChildRelations["Ramen_CartDetail"] == null)) {
-                    return new CartDetailRow[0];
-                }
-                else {
-                    return ((CartDetailRow[])(base.GetChildRows(this.Table.ChildRelations["Ramen_CartDetail"])));
-                }
             }
         }
         
