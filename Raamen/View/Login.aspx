@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Login Form</title>
+    <link href="assets/css/global.css" rel="stylesheet" type="text/css"/>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <style>
         .container-custom {

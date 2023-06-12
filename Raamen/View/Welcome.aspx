@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Welcome to RAAMEN</title>
+    <link href="assets/css/global.css" rel="stylesheet" type="text/css"/>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <style>
         .container-custom {
