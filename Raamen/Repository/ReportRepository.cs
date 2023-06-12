@@ -8,10 +8,15 @@ namespace Raamen.Repository
 {
     public class ReportRepository
     {
-        static Database1Entities db = new Database1Entities();
-        public static List<Raman> GetRamen()
+        public static List<Header> GetAllTransactions()
         {
+            Database1Entities db = new Database1Entities();
+            return db.Headers.ToList();
+        }
 
+        public static List<Raman> GetAllRamen()
+        {
+            Database1Entities db = new Database1Entities();
             return db.Ramen.ToList();
         }
     }
