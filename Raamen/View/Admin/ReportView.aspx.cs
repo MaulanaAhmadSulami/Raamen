@@ -56,7 +56,7 @@ namespace Raamen.View.Admin
                     drow["Quantity"] = cd.Quantity;
                     drow["Price"] = cd.Raman.Price;
                     drow["Total"] = cd.Quantity * int.Parse(cd.Raman.Price);
-                    subtotal = subtotal + (cd.Quantity * int.Parse(cd.Raman.Price));
+                    subtotal += (cd.Quantity * int.Parse(cd.Raman.Price));
                     drow["Subtotal"] = subtotal;
 
                     DetailTable.Rows.Add(drow);

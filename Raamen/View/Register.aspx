@@ -60,7 +60,7 @@
                     <asp:Label ID="lblError" runat="server" Text="" CssClass="text-danger"></asp:Label>
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center pt-3">
                     <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="btn btn-primary mt-2 px-4 py-2"/> <br />
                 </div>
             </div>

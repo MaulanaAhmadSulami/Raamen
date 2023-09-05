@@ -8,25 +8,25 @@
         <p class="fs-3">Welcome, Admin</p>
     </div>
     <div class="mt-3">
-            <asp:Label ID="Label2" runat="server" Text="Customer Data" CssClass="fs-4"></asp:Label>
-            <asp:GridView ID="cust_GV" runat="server" AutoGenerateColumns="false" CssClass="table">
-                <Columns>
-                    <asp:BoundField DataField="CustomerId" HeaderText="User ID" />
-                    <asp:BoundField DataField="Username" HeaderText="Username" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" />
-                    <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                </Columns>
-            </asp:GridView>
-        </div>
-        <div class="mt-3">
-            <asp:Label ID="Label3" runat="server" Text="Staff Data" CssClass="fs-4"></asp:Label>
-            <asp:GridView ID="staff_GV" runat="server" AutoGenerateColumns="false" CssClass="table">
-                <Columns>
-                    <asp:BoundField DataField="CustomerId" HeaderText="User ID" />
-                    <asp:BoundField DataField="Username" HeaderText="Username" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" />
-                    <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                </Columns>
-            </asp:GridView>
-        </div>
+        <asp:Label ID="Label2" runat="server" Text="Customer Data" CssClass="fs-4"></asp:Label>
+        <asp:GridView ID="cust_GV" runat="server" AutoGenerateColumns="false" CssClass="table table-hover">
+            <Columns>
+                <asp:BoundField DataField="CustomerId" HeaderText="User ID" />
+                <asp:BoundField DataField="Username" HeaderText="Username" />
+                <asp:BoundField DataField="Email" HeaderText="Email" />
+                <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            </Columns>
+        </asp:GridView>
+    </div>
+    <div class="mt-3">
+        <asp:Label ID="Label3" runat="server" Text="Staff Data" CssClass="fs-4"></asp:Label>
+        <asp:GridView ID="staff_GV" runat="server" AutoGenerateColumns="false" CssClass="table">
+            <Columns>
+                <asp:BoundField DataField="CustomerId" HeaderText="User ID" />
+                <asp:BoundField DataField="Username" HeaderText="Username" />
+                <asp:BoundField DataField="Email" HeaderText="Email" />
+                <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

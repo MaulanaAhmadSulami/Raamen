@@ -21,10 +21,6 @@
             background-color: #7EC5F0 !important
         }
 
-        .logoutBtn{
-            height: 32px;
-        }
-
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -48,7 +44,7 @@
                         <asp:Label ID="Label1" runat="server" Text="Hello! How are you," CssClass="d-flex align-items-center me-1 fs-6"></asp:Label>
                         <asp:Label ID="name" runat="server" Text="" CssClass="d-flex align-items-center fs-6 me-3"></asp:Label>
                         <div class=" d-flex align-items-center ">
-                            <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" CssClass="btn btn-secondary btn-sm logoutBtn"/>
+                            <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" CssClass="btn btn-secondary btn-sm"/>
                         </div>
                 </div>
             </div>

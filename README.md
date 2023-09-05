@@ -4,8 +4,8 @@ Progress:
 
 | Check	| Task						| Priority	| Notes		|
 |-------|---------------------------|-----------|-----------|
-| [ ]	| Login						| 1			|finishing	|
-| [ ]	| Register					| 1			|finishing	|
+| [x]	| Login						| 1			|			|
+| [x]	| Register					| 1			|			|
 | [ ]	| Nav Bar					| 1			|styling	|
 | [ ]	| Home Page					| 1			|styling	|
 | [ ]	| Profile					| 1			|styling	|
@@ -16,7 +16,7 @@ Progress:
 | [ ]	| History					| 3.2		|styling	|
 | [ ]	| Transaction Detail		| 3.3		|styling	|
 | [ ]	| Transactions Queue		| 3.4		|styling	|
-| [ ]	| View Transactions Report	| 4			|	Styling		|
+| [ ]	| View Transactions Report	| 4			|styling	|
 
 TBA: Bootstrap styling
 
