@@ -21,6 +21,21 @@ namespace Raamen.View.Customer
             
             cartGV.DataSource = CartHandler.getUserCartDetail(userId);
             cartGV.DataBind();
+            if(cartGV.Rows.Count == 0)
+            {
+                clearCart.Visible = false;
+                checkout.Visible = false;
+                LabelTotal.Text = "Your cart is empty.";
+            }
+            else
+            {
+                int sumTotal = 0;
+                foreach (GridViewRow row in cartGV.Rows)
+                {
+                    sumTotal += ((int.Parse(row.Cells[1].Text)) * int.Parse(row.Cells[2].Text));
+                }
+                total.Text = sumTotal.ToString(); 
+            }
         }
 
         protected void ramenGV_RowCommand(object sender, GridViewCommandEventArgs e)

@@ -6,28 +6,12 @@
 <head runat="server">
     <link href="../assets/css/global.css" rel="stylesheet" type="text/css"/>
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #7EC5F0 !important
-        }
-
-    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar py-0">
+        <nav class="navbar py-0" style="background-color: #7EC5F0">
             <div class="container-fluid">
                 <div class="d-flex navbar-brand justify-content-start">
                     <img src="/View/assets/ramen_nobg.png" alt="Company Logo" class="company-logo" height="60"/>
@@ -38,9 +22,11 @@
                     <a class="nav-link me-3 fs-3" href="TransactionsQueue.aspx">Order Queue</a>
                     <a class="nav-link me-3 fs-3" href="Profile.aspx">Profile</a>
                 </div>
-                <div class="d-inline-flex justify-content-end gap-1">
-                    <asp:Label ID="Label1" runat="server" Text="Hello! How are you," CssClass="greet_lbl"></asp:Label>
-                    <asp:Label ID="name" runat="server" Text="" CssClass="greets_userlbl"></asp:Label>
+                <div class="d-inline-flex justify-content-end align-items-center gap-1">
+                    <div class="me-2">
+                        <asp:Label ID="Label2" runat="server" Text="Hello! How are you,"></asp:Label>
+                        <asp:Label ID="name" runat="server" Text=""></asp:Label>
+                    </div>
                     <div class="d-flex align-items-center">
                         <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" CssClass="btn btn-secondary btn-sm"/>
                     </div>

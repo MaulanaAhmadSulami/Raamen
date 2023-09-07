@@ -42,13 +42,22 @@ namespace Raamen.View.Customer
         protected global::System.Web.UI.WebControls.GridView cartGV;
 
         /// <summary>
-        /// clearCart control.
+        /// LabelTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button clearCart;
+        protected global::System.Web.UI.WebControls.Label LabelTotal;
+
+        /// <summary>
+        /// total control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label total;
 
         /// <summary>
         /// checkout control.
@@ -58,5 +67,14 @@ namespace Raamen.View.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button checkout;
+
+        /// <summary>
+        /// clearCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button clearCart;
     }
 }
