@@ -38,7 +38,7 @@
                     <asp:Label ID="lblPassword" runat="server" AssociatedControlID="txtPassword" Text="Password" CssClass="form-label"></asp:Label>
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter your password" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div>
+                <div class="mb-2">
                     <asp:CheckBox ID="RememberMe" runat="server" Text="" CssClass="form-check-input border-0"/>
                     <asp:Label ID="lblRememberMe" runat="server" AssociatedControlID="RememberMe" Text="Remember me" CssClass="form-check-label"></asp:Label>
                 </div>

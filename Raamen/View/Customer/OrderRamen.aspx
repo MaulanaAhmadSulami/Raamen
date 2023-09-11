@@ -26,14 +26,10 @@
         <div class="mb-3">
             <asp:GridView ID="cartGV" runat="server" AutoGenerateColumns="false" OnRowCommand="cartGV_RowCommand" CssClass="table table-hover mb-1">
                 <Columns>
+                    <asp:BoundField DataField="CartDetailID" HeaderText="ID" />
                     <asp:BoundField DataField="Raman.Name" HeaderText="Ramen Name" />
                     <asp:BoundField DataField="Raman.Price" HeaderText="Price" />
                     <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
-                    <asp:TemplateField HeaderText="Subtotal">
-                        <ItemTemplate>
-                            <asp:Label ID="subtotal" runat="server" Text='<%# (Convert.ToInt32(Eval("Raman.Price")) * Convert.ToInt32(Eval("Quantity"))).ToString() %>'></asp:Label>
-                        </ItemTemplate>
-                    </asp:TemplateField>
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button ID="btnRemove" UseSubmitBehavior="false" runat="server" Text="Remove" CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" CommandName="removeRamen" CssClass="btn btn-sm btn-danger"/>
@@ -41,8 +37,7 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:Label ID="LabelTotal" runat="server" CssClass="ps-2">Total: </asp:Label>
-            <asp:Label ID="total" runat="server" Text=""></asp:Label>
+            <asp:Label ID="cartStatus" runat="server" CssClass="ps-2"></asp:Label>
         </div>
         <div class="px-2">
             <asp:Button ID="checkout" runat="server" Text="Buy Cart" OnClick="checkout_Click" CssClass="btn btn-primary me-2"/>

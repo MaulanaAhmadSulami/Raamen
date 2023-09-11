@@ -25,16 +25,7 @@ namespace Raamen.View.Customer
             {
                 clearCart.Visible = false;
                 checkout.Visible = false;
-                LabelTotal.Text = "Your cart is empty.";
-            }
-            else
-            {
-                int sumTotal = 0;
-                foreach (GridViewRow row in cartGV.Rows)
-                {
-                    sumTotal += ((int.Parse(row.Cells[1].Text)) * int.Parse(row.Cells[2].Text));
-                }
-                total.Text = sumTotal.ToString(); 
+                cartStatus.Text = "Your cart is empty.";
             }
         }
 
