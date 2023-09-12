@@ -5,5 +5,8 @@
     <title>Report Summary</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <CR:CrystalReportViewer ID="CrystalReportViewer" runat="server" AutoDataBind="true" />
+    <h2 class="text-center mt-3 mb-4">Transaction Report</h2>
+    <div class="d-flex justify-content-center pb-5">
+        <CR:CrystalReportViewer ID="CrystalReportViewer" runat="server" AutoDataBind="true" />
+    </div>
 </asp:Content>

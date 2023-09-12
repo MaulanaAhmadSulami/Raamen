@@ -1262,16 +1262,11 @@
     <Content Include="View\Customer\History.aspx" />
     <Content Include="View\Customer\HistoryDetail.aspx" />
     <Content Include="View\Customer\Home.aspx" />
-    <Content Include="View\Customer\HomeStyle.css" />
-    <Content Include="View\Customer\NavbarStyle.css" />
     <Content Include="View\Customer\OrderRamen.aspx" />
     <Content Include="View\Customer\Profile.aspx" />
-    <Content Include="View\Customer\ProfileStyle.css" />
     <Content Include="View\Staff\HistoryDetail.aspx" />
     <Content Include="View\Staff\Home.aspx" />
-    <Content Include="View\Staff\NavbarStyle.css" />
     <Content Include="View\Staff\Profile.aspx" />
-    <Content Include="View\Staff\ProfileStyle.css" />
     <Content Include="View\Staff\RamenInsert.aspx" />
     <Content Include="View\Staff\RamenManage.aspx" />
     <Content Include="View\Staff\RamenUpdate.aspx" />
@@ -1280,7 +1275,6 @@
     <Content Include="View\Login.aspx" />
     <Content Include="View\assets\ramen_nobg.png" />
     <Content Include="View\Register.aspx" />
-    <Content Include="View\Staff\HomeStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

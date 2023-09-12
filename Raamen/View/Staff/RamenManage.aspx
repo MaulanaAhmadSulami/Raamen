@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-        <h1 class="mb-3">Manage Ramen</h1>
+        <h1 class="mt-3 mb-4">Manage Ramen</h1>
         <asp:Button ID="insertRamen" runat="server" Text="Insert" OnClick="insertRamen_Click" CssClass="btn btn-primary mb-1 btn-sm"/>
         <br />
         <asp:GridView ID="ramenGV" runat="server" AutoGenerateColumns="false" OnRowEditing="ramenGV_RowEditing" OnRowDeleting="ramenGV_RowDeleting" CssClass="table table-hover">

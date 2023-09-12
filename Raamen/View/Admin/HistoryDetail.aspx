@@ -3,7 +3,7 @@
     <title>History Detail</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Transaction Detail</h1>
+    <h1 class="mt-3 mb-4">Transaction Detail</h1>
     <div class="d-flex justify-content-between align-items-center mt-3 mb-2">
         <div>
             <asp:Button ID="backButton" runat="server" Text="< Back" OnClick="backButton_Click" CssClass="btn btn-sm btn-secondary"/>

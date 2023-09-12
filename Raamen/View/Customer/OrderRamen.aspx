@@ -23,7 +23,7 @@
     </div>
     <div>
         <h1 class="mt-5 mb-4 ps-2">Cart</h1>
-        <div class="mb-3">
+        <div class="mb-1">
             <asp:GridView ID="cartGV" runat="server" AutoGenerateColumns="false" OnRowCommand="cartGV_RowCommand" CssClass="table table-hover mb-1">
                 <Columns>
                     <asp:BoundField DataField="CartDetailID" HeaderText="ID" />
@@ -39,7 +39,7 @@
             </asp:GridView>
             <asp:Label ID="cartStatus" runat="server" CssClass="ps-2"></asp:Label>
         </div>
-        <div class="px-2">
+        <div>
             <asp:Button ID="checkout" runat="server" Text="Buy Cart" OnClick="checkout_Click" CssClass="btn btn-primary me-2"/>
             <asp:Button ID="clearCart" runat="server" Text="Clear Cart" OnClick="clearCart_Click" CssClass="btn btn-secondary"/>
         </div>
