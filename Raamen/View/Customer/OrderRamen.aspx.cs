@@ -21,6 +21,12 @@ namespace Raamen.View.Customer
             
             cartGV.DataSource = CartHandler.getUserCartDetail(userId);
             cartGV.DataBind();
+            if(cartGV.Rows.Count == 0)
+            {
+                clearCart.Visible = false;
+                checkout.Visible = false;
+                cartStatus.Text = "Your cart is empty.";
+            }
         }
 
         protected void ramenGV_RowCommand(object sender, GridViewCommandEventArgs e)

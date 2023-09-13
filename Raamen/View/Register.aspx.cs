@@ -1,4 +1,6 @@
 ﻿using Raamen.Handler;
+using Raamen.Model;
+using Raamen.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +15,34 @@ namespace Raamen.View
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.EnableViewState = true;
+            HttpCookie cookie = Request.Cookies["user_cookie"];
+
+            if (cookie != null)
+            {
+                string ifCookie = cookie.Value;
+                int getId = ifCookie.IndexOf('-') + 1;
+                int getUserId = int.Parse(ifCookie.Substring(getId));
+
+                User user = UserRepository.getUserById(getUserId);
+
+                if (user.RoleId == 1)
+                {
+                    Response.Redirect("Admin/Home.aspx");
+                }
+                else if (user.RoleId == 3)
+                {
+                    Response.Redirect("Staff/Home.aspx");
+                }
+                else if (user.RoleId == 4)
+                {
+                    Response.Redirect("Customer/Home.aspx");
+                }
+            }
         }
 
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-
 
             string username = txtUsername.Text;
             string email = txtEmail.Text;
@@ -37,17 +61,15 @@ namespace Raamen.View
                 status = Controller.UserController.RegisterUser(username, email, gender, password, conf_password, false);
             }
             lblError.Text = status;
-            //string status = Controller.UserController.RegisterUser(username, email, gender, password, conf_password);
-            //lblError.Text = status;
 
-            //if(status == "User registered successfully.")
-            //{
-            //    Response.Redirect("Homepage.aspx");
-            //}
+            if(status == "User registered successfully.")
+            {
+                Response.Redirect("Login.aspx");
+            }
 
         }
 
-        protected void btnReturn_Click(object sender, EventArgs e)
+        protected void backBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Welcome.aspx");
         }

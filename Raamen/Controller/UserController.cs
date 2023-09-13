@@ -44,24 +44,17 @@ namespace Raamen.Controller
                 return "Password and confirm password must match";
 
             }
-            using (var db = new Database1Entities())
+            if (isStaff)
             {
-                if (isStaff)
-                {
-                    User staffUser = UserFactory.CreateStaffUser(username, email, gender, password);
-                    UserRepository.RegistUser(staffUser);
-                }
-                else
-                {
-                    User customerUser = UserFactory.createUser(username, email, gender, password, 4); // RoleId 4 for customers
-                    int userId = UserRepository.RegistUser(customerUser);
-                    CartHandler.CreateCart(userId);
-                }
-                //User user = Factory.UserFactory.createUser(username, email, gender, password, 4);
-                //db.Users.Add(user);
-                //db.SaveChanges();
+                User staffUser = UserFactory.CreateStaffUser(username, email, gender, password);
+                UserRepository.RegistUser(staffUser);
             }
-
+            else
+            {
+                User customerUser = UserFactory.createUser(username, email, gender, password, 4); // RoleId 4 for customers
+                int userId = UserRepository.RegistUser(customerUser);
+                CartHandler.CreateCart(userId);
+            }
             return "User registered successfully.";
         }
 

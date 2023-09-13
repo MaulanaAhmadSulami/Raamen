@@ -4,23 +4,20 @@ Progress:
 
 | Check	| Task						| Priority	| Notes		|
 |-------|---------------------------|-----------|-----------|
-| [ ]	| Login						| 1			|finishing	|
-| [ ]	| Register					| 1			|finishing	|
-| [ ]	| Nav Bar					| 1			|styling	|
-| [ ]	| Home Page					| 1			|styling	|
-| [ ]	| Profile					| 1			|styling	|
-| [ ]	| Manage Ramen				| 2.1		|styling	|
-| [ ]	| Insert Ramen				| 2.2		|styling	|
-| [ ]	| Update Ramen				| 2.3		|styling	|
-| [ ]	| Order Ramen				| 3.1		|styling	|
-| [ ]	| History					| 3.2		|styling	|
-| [ ]	| Transaction Detail		| 3.3		|styling	|
-| [ ]	| Transactions Queue		| 3.4		|styling	|
-| [ ]	| View Transactions Report	| 4			|	Styling		|
-
-TBA: Bootstrap styling
+| [x]	| Login						| 1			||
+| [x]	| Register					| 1			||
+| [x]	| Nav Bar					| 1			||
+| [x]	| Home Page					| 1			||
+| [x]	| Profile					| 1			||
+| [x]	| Manage Ramen				| 2.1		||
+| [x]	| Insert Ramen				| 2.2		||
+| [x]	| Update Ramen				| 2.3		||
+| [x]	| Order Ramen				| 3.1		||
+| [x]	| History					| 3.2		||
+| [x]	| Transaction Detail		| 3.3		||
+| [x]	| Transactions Queue		| 3.4		||
+| [x]	| View Transactions Report	| 4			||
 
 Notes:
-- semua yang di priority 2 n 3 perlu benerin column-column tabelnya supaya "the design is very human"
 - perjelas function cart (nyampur sama cartdetail)
 - refactor struktur file sama nama-namanya
